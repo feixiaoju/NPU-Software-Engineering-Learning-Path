@@ -1,0 +1,7 @@
+C       10.0.0.8/30 is directly connected, Serial0/1
+C       10.0.0.0/30 is directly connected, Serial0/0
+D       10.0.0.0/8 is a summary, 00:01:06, Null0
+D       10.0.0.4/30 [90/2681856] via 10.0.0.2, 00:01:14, Serial0/0
+                    [90/2681856] via 10.0.0.10, 00:01:14, Serial0/1
+C    192.168.0.0/24 is directly connected, FastEthernet0/0
+D    192.168.1.0/24 [90/2172416] via 10.0.0.10, 00:01:14, Serial0/1
