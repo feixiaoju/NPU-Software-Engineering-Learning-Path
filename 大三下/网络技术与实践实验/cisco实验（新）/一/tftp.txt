@@ -1,0 +1,29 @@
+ROMMON 1 >IP_ADDRESS= ROUTER的IP地址（要和TFTP服务器在同一网段内） 
+ROMMON 2 >IP_SUBNET_MASK= ROUTER的子网掩码 
+ROMMON 3 >DEFAULT_GATEWAY= 默认网关地址 （可以没有，也可以是TFTP服务器） 
+ROMMON 4 >TFTP_SERVER= TFTP 服务器IP地址 
+ROMMON 5 >TFTP_FILE= IOS文件名（只给出文件名，不需要路径） 
+ROMMON 6 >tftpdnld 回车
+PHY did not complete auto-negotation, status = 0x100
+
+
+
+
+
+Copyright (c) 2001 by cisco Systems, Inc.
+C2600 platform with 65536 Kbytes of main memory
+
+program load complete, entry point: 0x80008000, size: 0x71f574
+Self decompressing the image :
+Error : Uncompression of the image failed.
+invalid compressed data--format violated
+
+Error : zip decompress failed
+
+*** System received a Software forced crash ***
+signal= 0x17, code= 0x7, context= 0x8000c054
+PC = 0x0, Vector = 0x0, SP = 0x0
+
+System Bootstrap, Version 12.2(6r),  RELEASE SOFTWARE (fc1)
+TAC Support: http://www.cisco.com/tac
+Copyright (c) 2001 by cisco Systems, Inc.
