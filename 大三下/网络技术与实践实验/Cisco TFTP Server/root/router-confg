@@ -1,0 +1,51 @@
+
+!
+version 12.1
+no service single-slot-reload-enable
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+!
+hostname Router
+!
+logging rate-limit console 10 except errors
+!
+username cisco3 password 7 045802150C2E1F
+username cisco6 privilege 15 password 7 05080F1C224318
+ip subnet-zero
+no ip finger
+no ip domain-lookup
+!
+cns event-service server
+!
+!
+!
+!
+!
+interface Ethernet0
+ ip address 192.168.0.1 255.255.255.0
+!
+interface Serial0
+ no ip address
+ shutdown
+!
+interface Serial1
+ no ip address
+ shutdown
+!
+ip kerberos source-interface any
+ip classless
+no ip http server
+!
+!
+!
+line con 0
+ privilege level 15
+ login
+ transport input none
+line aux 0
+line vty 0 4
+ password 7 110A1016141D59
+ login
+!
+end

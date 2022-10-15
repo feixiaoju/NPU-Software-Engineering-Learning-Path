@@ -1,0 +1,50 @@
+Sat Jul 03 18:49:32 2004: 正在接收 'c2800nm-ipbase-mz.124-15.T13.bin' 文件从 192.168.0.2 以 binary 模式
+Sat Jul 03 18:50:15 2004: 被用户中断.
+Sat Jul 03 20:04:53 2004: 正在接收 'run-config' 文件从 192.168.0.2 以 binary 模式
+Sat Jul 03 20:04:53 2004: 成功.
+Sat Jul 03 20:08:14 2004: 正在发送 'run-config' 文件到 192.168.0.2 以 binary 模式
+Sat Jul 03 20:08:14 2004: 成功.
+Sat Jul 03 20:08:14 2004: 正在发送 'run-config' 文件到 192.168.0.2 以 binary 模式
+Sat Jul 03 20:08:14 2004: 成功.
+Sat Jul 03 20:08:14 2004: 正在发送 'run-config' 文件到 192.168.0.2 以 binary 模式
+Sat Jul 03 20:08:14 2004: 成功.
+Sat Jul 03 20:08:14 2004: 正在发送 'run-config' 文件到 192.168.0.2 以 binary 模式
+Sat Jul 03 20:08:14 2004: 成功.
+Sat Jul 03 20:12:00 2004: 正在接收 'c2800nm-ipbase-mz.124-15.T13.bin' 文件从 192.168.0.2 以 binary 模式
+Sat Jul 03 20:14:29 2004: 成功.
+Mon Jul 05 20:11:41 2004: 正在接收 'router-confg' 文件从 192.168.0.2 以 binary 模式
+Mon Jul 05 20:11:41 2004: 成功.
+Fri Oct 24 19:52:18 2014: 正在接收 'c2600-router-run' 文件从 192.168.0.2 以 binary 模式
+Fri Oct 24 19:52:18 2014: 成功.
+Fri Oct 24 19:54:35 2014: 正在发送 'c2600-router-run' 文件到 192.168.0.2 以 binary 模式
+Fri Oct 24 19:54:35 2014: 成功.
+Fri Oct 24 19:54:35 2014: 正在发送 'c2600-router-run' 文件到 192.168.0.2 以 binary 模式
+Fri Oct 24 19:54:35 2014: 成功.
+Fri Oct 24 19:54:35 2014: 正在发送 'c2600-router-run' 文件到 192.168.0.2 以 binary 模式
+Fri Oct 24 19:54:35 2014: 成功.
+Fri Oct 24 19:54:35 2014: 正在发送 'c2600-router-run' 文件到 192.168.0.2 以 binary 模式
+Fri Oct 24 19:54:35 2014: 成功.
+Fri Oct 24 19:56:19 2014: 正在接收 'c2600-ipbase-mz.123-6e.bin' 文件从 192.168.0.2 以 binary 模式
+Fri Oct 24 19:57:27 2014: 成功.
+Sun Oct 26 20:18:33 2014: 正在接收 'router-confg' 文件从 192.168.0.1 以 binary 模式
+Sun Oct 26 20:18:33 2014: 成功.
+Sat Sep 26 15:28:57 2015: 正在接收 'router-confg' 文件从 192.168.0.1 以 binary 模式
+Sat Sep 26 15:28:57 2015: 成功.
+Sat Sep 26 15:30:48 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:30:48 2015: 成功.
+Sat Sep 26 15:30:48 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:30:48 2015: 成功.
+Sat Sep 26 15:30:48 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:30:48 2015: 成功.
+Sat Sep 26 15:30:48 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:30:48 2015: 成功.
+Sat Sep 26 15:31:34 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:31:34 2015: 成功.
+Sat Sep 26 15:31:34 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:31:34 2015: 成功.
+Sat Sep 26 15:31:34 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:31:34 2015: 成功.
+Sat Sep 26 15:31:34 2015: 正在发送 'router-confg' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 15:31:34 2015: 成功.
+Sat Sep 26 17:06:29 2015: 正在发送 'c2600-ipbase-mz.123-6e.bin' 文件到 192.168.0.1 以 binary 模式
+Sat Sep 26 17:07:00 2015: 成功.
