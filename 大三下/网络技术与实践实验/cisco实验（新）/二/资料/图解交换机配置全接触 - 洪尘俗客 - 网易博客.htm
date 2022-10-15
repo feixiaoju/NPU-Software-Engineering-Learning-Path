@@ -1,0 +1,619 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0061)http://hbq620.blog.163.com/blog/static/611517200723113231683/ -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>图解:交换机配置全接触 - 洪尘俗客 - 网易博客</TITLE>
+<META content=洪尘俗客,hbq620 name=Author>
+<META content="电脑网络技术 hbq620 洪尘俗客 图解:交换机配置全接触 网易博客 网易" name=Keywords>
+<META content="图解:交换机配置全接触 洪尘俗客的网易博客" name=Description>
+<META http-equiv=Content-Type content=text/html;charset=gbk><LINK title=RSS 
+href="http://hbq620.blog.163.com/rss/" type=application/rss+xml 
+rel=alternate><LINK href="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/g.css" type=text/css 
+rel=stylesheet><LINK href="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/i.css" type=text/css 
+rel=stylesheet><LINK href="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/l.css" type=text/css 
+rel=stylesheet><LINK href="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/main.css" 
+type=text/css rel=stylesheet><LINK 
+href="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/editor.css" type=text/css 
+rel=stylesheet><LINK id=_$$_link_theme 
+href="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/s.css" type=text/css rel=stylesheet><LINK 
+href="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/blog.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>#blog-163-com .wql {
+	DISPLAY: none
+}
+#blog-163-com .wqr {
+	DISPLAY: none
+}
+#blog-163-com .wqc {
+	WIDTH: 100%
+}
+</STYLE>
+
+<SCRIPT type=text/JavaScript>
+<!--//--><![CDATA[//><!--
+var spaceStaticData={ 
+     style: '/style/common/', 
+     hostId: 611517,
+     hostPath:'',
+     hostName: 'hbq620', 
+     visitorName:'', 
+     hostNickname: '洪尘俗客',
+     visitorNickname: '',
+     visitorPopoAccount:'',
+     visitorPopoPassWdMD5:'',
+     visitorRank:'-100',
+     pageName:'prevBlogPerma'
+};   
+//--><!]]>
+</SCRIPT>
+
+<SCRIPT type=text/JavaScript>
+<!--//--><![CDATA[//><!--
+var UD = { 
+     status       : 'prev',
+     hostId       :  611517,
+     visitorId    :  0,
+     hostPath     : '',
+     hostName     : 'hbq620', 
+     pageName     : 'prevBlogPerma',
+     visitorRank  : '-100',
+     visitorName  : '', 
+     hostNickname : '洪尘俗客',
+     visitorNickname     : '',
+     hasAdminCircles: 'false'
+};   
+//--><!]]>
+</SCRIPT>
+
+<SCRIPT src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/core.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/interface.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/blog.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.3086" name=GENERATOR></HEAD>
+<BODY class=bggb lang=zh id=blog-163-com>
+<DIV id=remind_top_zone>
+<DIV id=remind_top_content></DIV><A id=remind_top_close title=关闭 
+onclick="closeRemindTop();return false;"></A>
+<DIV class=sepDiv></DIV></DIV>
+<DIV class="wsy g_c_clr g_p_center g_t_right g_h_30" id=top_alert_bar 
+style="DISPLAY: none"><A class="g_c_button bd01 butn c05" hideFocus 
+onclick=HomeManager.saveHomeData();>保　存</A> <SPAN>&nbsp;&nbsp;</SPAN> <A 
+class="g_c_button bd01 butn c05" hideFocus 
+onclick=HomeManager.reInitPage();>取　消</A> <SPAN>&nbsp;&nbsp;</SPAN> </DIV>
+<DIV class="bgtt wsy">
+<DIV class="bg10 wsy" id=_$$_Top_Outer>
+<DIV class="bg11 ht wkg g_p_relative" id=_$$_Top_Inner>
+<DIV class="logo g_p_absolute" 
+onclick="window.location.href='http://blog.163.com/login.html';return false;"></DIV>
+<DIV class="title g_p_absolute">
+<DIV class="fs01 g_t_bold" id=spacename>电脑网络技术</DIV>
+<DIV class=g_t_indent id=spacedesc>不积跬步 无以至千里</DIV></DIV>
+<DIV class="tplnk c01 g_p_absolute g_menu_lk"><A href="http://blog.163.com/" 
+target=_blank>网易博客</A><SPAN class="s bd1c">&nbsp;|&nbsp;</SPAN> <A 
+class=g_t_bold id=ne_focusme_open onclick="return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">收藏/加为好友</A><SPAN 
+class="s bd1c">|</SPAN> <A href="http://blog.163.com/blog_help">帮助</A><SPAN 
+class="s bd1c">|</SPAN> <A 
+onclick="showLoginDlg('hbq620.blog.163.com');return false;" 
+href="javascript:;">登录</A></SPAN> </DIV></DIV></DIV>
+<DIV class="bg20 wsy">
+<DIV class="bg21 hn c02 wkg g_p_relative">
+<DIV class="wnl hn g_p_absolute g_p_left_top g_p_hide"></DIV>
+<DIV class="wnr hn g_p_absolute g_p_rght_top"></DIV>
+<DIV class="wnc hn g_t_center">
+<DIV class="hn g_menu_nv">
+<DIV class="hn item "><A hideFocus onclick="" 
+href="http://hbq620.blog.163.com/">首页</A> </DIV>
+<DIV class="hn item seltag"><A hideFocus onclick="" 
+href="http://hbq620.blog.163.com/blog/">日志</A> </DIV>
+<DIV class="hn item "><A hideFocus onclick="" 
+href="http://hbq620.blog.163.com/album/">相片</A> </DIV>
+<DIV class="hn item "><A hideFocus onclick="" 
+href="http://hbq620.blog.163.com/collection/">收藏</A> </DIV>
+<DIV class="hn item "><A hideFocus onclick="" 
+href="http://hbq620.blog.163.com/friends/">好友</A> </DIV>
+<DIV class="hn item "><A hideFocus onclick="" 
+href="http://hbq620.blog.163.com/tag/?tagModPrev">标签</A> </DIV>
+<DIV class="hn item "><A hideFocus onclick="" 
+href="http://hbq620.blog.163.com/profile/">关于我</A> 
+</DIV></DIV></DIV></DIV></DIV>
+<DIV class="bgtf wsy">
+<DIV class="hz wkg g_p_relative">
+<DIV class="wzl hz g_p_absolute g_p_left_top"></DIV>
+<DIV class="wzr hz g_p_absolute g_p_rght_top"></DIV>
+<DIV class="wzc hz">&nbsp;</DIV></DIV></DIV>
+<DIV class="bgmt wsy">
+<DIV class="hy wkg g_p_relative">
+<DIV class="wyl hy g_p_absolute g_p_left_top"></DIV>
+<DIV class="wyr hy g_p_absolute g_p_rght_top"></DIV>
+<DIV class="wyc hy">&nbsp;</DIV></DIV></DIV>
+<DIV class="bg40 wsy">
+<DIV class="bg41 wkg g_p_relative g_p_hide">
+<DIV class="wml mtl g_p_absolute g_p_left_top g_t_space"></DIV>
+<DIV class="wml hbl g_p_absolute g_p_left_btm g_t_space"></DIV>
+<DIV class="wmr mtr g_p_absolute g_p_rght_top g_t_space"></DIV>
+<DIV class="wmr hbr g_p_absolute g_p_rght_btm g_t_space"></DIV>
+<DIV class="wml bgml g_p_left g_p_fill g_t_space"></DIV>
+<DIV class="wmr bgmr g_p_right g_p_fill g_t_space"></DIV>
+<DIV class="wmc g_p_center g_t_center" id=_$$_module_container>
+<DIV class="wql hm g_p_left" id=_$$_module_container_left></DIV>
+<DIV class="wqr hm g_p_right" id=_$$_module_container_right></DIV>
+<DIV class="wqc hm g_p_right" id=_$$_module_container_center></DIV>
+<DIV class="g_p_clear g_t_space"></DIV></DIV></DIV></DIV>
+<DIV class="bgmf wsy">
+<DIV class="hx wkg g_p_relative">
+<DIV class="wxl hx g_p_absolute g_p_left_top"></DIV>
+<DIV class="wxr hx g_p_absolute g_p_rght_top"></DIV>
+<DIV class="wxc hx">&nbsp;</DIV></DIV></DIV>
+<DIV class="bg50 wsy">
+<DIV class="bg51 hf wkg g_t_center c10">
+<DIV class="g_menu_bt fmgtp"><A href="http://corp.163.com/index_gb.html" 
+target=_blank>公司简介</A><SPAN>-</SPAN> <A 
+href="http://gb.corp.163.com/gb/contactus.html" 
+target=_blank>联系方法</A><SPAN>-</SPAN> <A 
+href="http://corp.163.com/gb/job/job.html" target=_blank>招聘信息</A><SPAN>-</SPAN> 
+<A href="http://help.163.com/" target=_blank>客户服务</A><SPAN>-</SPAN> <A 
+href="http://corp.163.com/gb/legal/legal.html" 
+target=_blank>相关法律</A><SPAN>-</SPAN> <A onclick="openPopAdvice();return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">用户反馈</A><SPAN>-</SPAN> 
+<A onclick="openPopreport();return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">举报不良信息</A><SPAN>-</SPAN> 
+<A class="p_ p0" href="http://hbq620.blog.163.com/rss/" target=_blank>&nbsp;</A> 
+</DIV>
+<DIV class=g_t_center>网易公司版权所有 &copy;1997-2007</DIV></DIV></DIV>
+<DIV class=g_p_none id=_$$_hidden_container>&nbsp;</DIV>
+<DIV id=_$$_layer_container style="DISPLAY: none"></DIV>
+<SCRIPT language=JavaScript>
+<!--//--><![CDATA[//><!--
+ 	if (NEBlog==undefined) 
+		var NEBlog={};
+
+	NEBlog.gPermalink_Comments = [];
+//--><!]]>
+</SCRIPT>
+
+<DIV class=g_p_none><!-- 单篇日志预览-菜单 -->
+<DIV id=_$$_blog_perma_menu><A class="g_p_block g_w_45 g_p_left g_t_left n_ n34" 
+href="http://hbq620.blog.163.com/blog/static/611517200723095418852">
+<P class="g_w_95 g_t_hide g_c_hand g_p_left">PC World 
+评选出全球101个绝佳免费软件产品</P></A><A class="g_p_block g_w_45 g_p_right g_t_right n_ n33c" 
+href="http://hbq620.blog.163.com/blog/static/6115172007331198449">
+<P class="g_p_right g_w_95 g_t_hide g_c_hand">我的U盘也中招了</P></A>
+<DIV class="g_p_clear g_t_space"></DIV></DIV><!-- 单篇日志预览-内容 -->
+<DIV class="g_c_container g_p_hide " id=_$$_blog_perma>
+<DIV class="g_title_00 g_c_pdin g_h_20 c08">
+<DIV>字号[ <A class=c06 
+onclick="changeFont('blogtext__fks_r9LTlcJWbXqdxsWseXBdzQ==', 1);return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">大</A>&nbsp; 
+<A class=c06 
+onclick="changeFont('blogtext__fks_r9LTlcJWbXqdxsWseXBdzQ==', 2);return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">中</A>&nbsp; 
+<A class=c06 id=smallfont 
+onclick="changeFont('blogtext__fks_r9LTlcJWbXqdxsWseXBdzQ==', 3);return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">小</A>] 
+</DIV></DIV>
+<P 
+class="g_w_100 g_t_wrap g_t_center g_t_bold g_t_24 g_c_pdin c07">图解:交换机配置全接触</P>
+<DIV 
+class="g_h_20 g_w_90 g_t_center g_t_hide g_p_center c08"><LABEL>分类:&nbsp;</LABEL><A 
+class=c06 
+href="http://hbq620.blog.163.com/hbq620/blog/prevBlog.do?clsId=_fks_QhVm6pTZHwWFaLnV7Ogy5g==&amp;class=">电脑技术</A> 
+<NOBR class=bd1c>&nbsp;|&nbsp;</NOBR> <LABEL>标签:&nbsp;</LABEL> <A class=c06 
+onclick="NEBlog.gPermaLinkPage.searchTagObj('网络','hbq620');return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">网络</A>, <A 
+class=c06 
+onclick="NEBlog.gPermaLinkPage.searchTagObj('电脑技术','hbq620');return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">电脑技术</A> 
+</DIV>
+<DIV class=g_blog_prvlist>
+<DIV class=item>
+<DIV class="g_t_left g_c_pdin g_p_center c07 content" 
+id=blogtext__fks_r9LTlcJWbXqdxsWseXBdzQ== style="WIDTH: 760px">
+<P 
+style="TEXT-INDENT: 2em">交换机的配置一直以来是非常神秘的，不仅对于一般用户，对于绝大多数网管人员来说也是如此，同时也是作为网管水平高低衡量的一个重要而又基本的标志。这主要在两个原因，一是绝大多数企业所配置的交换机都是桌面非网管型交换机，根本不需任何配置，纯属“傻瓜”型，与集线器一样，接上电源，插好网线就可以正常工作；另一方面多数中、小企业老总对自己的网管员不是很放心，所以即使购买的交换机是网管型的，也不让自己的网管人员来配置，而是请厂商工程师或者其它专业人员来配置，所以这些中、小企业网管员也就很难有机会真正自己动手来配置一台交换机。</P>
+<P 
+style="TEXT-INDENT: 2em">　　交换机的详细配置过程比较复杂，而且具体的配置方法会因不同品牌、不同系列的交换机而有所不同，本文教给大家的只是通用配置方法，有了这些通用配置方法，我们就能举一反三，融会贯通。</P>
+<P 
+style="TEXT-INDENT: 2em">　　通常网管型交换机可以通过两种方法进行配置：一种就是本地配置；另一种就是远程网络配置两种方式，但是要注意后一种配置方法只有在前一种配置成功后才可进行，下面分别讲述。</P>
+<P style="TEXT-INDENT: 2em">　　一、本地配置方式</P>
+<P 
+style="TEXT-INDENT: 2em">　　本地配置我们首先要遇到的是它的物理连接方式，然后还需要面对软件配置，在软件配置方面我们主要以最常见的思科的“Catalyst 
+1900”交换机为例来讲述。 因为要进行交换机的本地配置就要涉及到硬、软件的连接了，所以下面我们分这两步来说明配置的基本连接过程。</P>
+<P style="TEXT-INDENT: 2em">　　1．物理连接</P>
+<P 
+style="TEXT-INDENT: 2em">　　因为笔记本电脑的便携性能，所以配置交换机通常是采用笔记本电脑进行，在实在无笔记本的情况下，当然也可以采用台式机，但移动起来麻烦些。交换机的本地配置方式是通过计算机与交换机的“Console”端口直接连接的方式进行通信的，它的连接图如图1所示。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/agjogeo1.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图1</P>
+<P 
+style="TEXT-INDENT: 2em">　　可进行网络管理的交换机上一般都有一个“Console”端口（这个在前面介绍集线器时已作介绍，交换机也一样），它是专门用于对交换机进行配置和管理的。通过Console端口连接并配置交换机，是配置和管理交换机必须经过的步骤。虽然除此之外还有其他若干种配置和管理交换机的方式（如Web方式、Telnet方式等），但是，这些方式必须依靠通过Console端口进行基本配置后才能进行。因为其他方式往往需要借助于IP地址、域名或设备名称才可以实现，而新购买的交换机显然不可能内置有这些参数，所以通过Console端口连接并配置交换机是最常用、最基本也是网络管理员必须掌握的管理和配置方式。　不同类型的交换机Console端口所处的位置并不相同，有的位于前面板（如Catalyst 
+3200和Catalyst 4006），而有的则位于后面板（如Catalyst 1900和Catalyst 
+2900XL）。通常是模块化交换机大多位于前面板，而固定配置交换机则大多位于后面板。不过，倒不用担心无法找到Console端口，在该端口的上方或侧方都会有类似“CONSOLE”字样的标识，如图2所示。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/agjogeo2.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图2</P>
+<P style="TEXT-INDENT: 2em">　　除位置不同之外，Console端口的类型也有所不同，绝大多数（如Catalyst 
+1900和Catalyst 4006）都采用RJ－45端口（如图2所示），但也有少数采用DB－9串口端口（如Catalyst 
+3200）或DB－25串口端口（如Catalyst 2900）。</P>
+<P 
+style="TEXT-INDENT: 2em">　　无论交换机采用DB－9或DB－25串行接口，还是采用RJ－45接口，都需要通过专门的Console线连接至配置用计算机（通常称作终端）的串行口。与交换机不同的Console端口相对应，Console线也分为两种：一种是串行线，即两端均为串行接口（两端均为母头），两端可以分别插入至计算机的串口和交换机的Console端口；另一种是两端均为RJ－45接头（RJ－45－to－RJ－45）的扁平线。由于扁平线两端均为RJ－45接口，无法直接与计算机串口进行连接，因此，还必须同时使用一个如图3所示的RJ－45－to－DB－9（或RJ－45－to－DB－25）的适配器。通常情况下，在交换机的包装箱中都会随机赠送这么一条Console线和相应的DB－9或DB－25适配器。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/agjogeo3.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图3</P>
+<P style="TEXT-INDENT: 2em">　2、软件配置</P>
+<P 
+style="TEXT-INDENT: 2em">　　物理连接好了我们就要打开计算机和交换机电源进行软件配置了，下面我们以思科的一款网管型交换机“Catalyst 
+1900”来讲述这一配置过程。在正式进入配置之前我们还需要进入系统，步骤如下：</P>
+<P style="TEXT-INDENT: 2em">　　第1步：打开与交换机相连的计算机电源，运行计算机中的Windows 95、Windows 
+98或Windows 2000等其中一个操作系统。</P>
+<P style="TEXT-INDENT: 2em">　　第2步：检查是否安装有“超级终端”（Hyper 
+Terminal）组件。如果在“附件”（Accessories）中没有发现该组件，可通过“添加／删除程序”（Add／Remove 
+Program）的方式添加该Windows组件。</P>
+<P 
+style="TEXT-INDENT: 2em">　　好了，“超级终端”安装好后我们就可以与交换机进行通信了（当然要连接好，并打开交换机电源了），下面的步骤就是正式进行配置了。在使用超级终端建立与交换机的通信之前，必须先对超级终端进行必要的设置。</P>
+<P style="TEXT-INDENT: 2em">　　Catalyst 
+1900交换机在配置前的所有缺省配置为：所有端口无端口名；所有端口的优先级为Normal方式，所有10／100Mbps以太网端口设为Auto方式，所有10／100Mbps以太网端口设为半双工方式，未配置虚拟子网。正式配置步骤如下（本文以Windows 
+98系统为例）：</P>
+<P style="TEXT-INDENT: 2em">　第1步：单击“开始”按钮，在“程序”菜单的“附件”选项中单击“超级终端”，弹出如图4所示界面。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/agjogeo4.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图4</P>
+<P 
+style="TEXT-INDENT: 2em">第2步：双击“Hypertrm”图标，弹出如图5所示对话框。这个对话框是用来对立一个新的超级终端连接项。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/agjogeo5.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P 
+style="TEXT-INDENT: 2em">　　第3步：在“名称”文本框中键入需新建超的级终端连接项名称，这主要是为了便于识别，没有什么特殊要求，我们这里键入“Cisco”，如果您想为这个连接项选择一个自己喜欢的图标的话，您也可以在下图的图标栏中选择一个，然后单击“确定”按钮，弹出如图6所示的对话框。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/ghdhdsjg6.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图6</P>
+<P 
+style="TEXT-INDENT: 2em">　　第4步：在“连接时使用”下拉列表框中选择与交换机相连的计算机的串口。单击“确定”按钮，弹出如图7所示的对话框。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/agjogeo7.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图7</P>
+<P 
+style="TEXT-INDENT: 2em">　　第5步：在“波特率”下拉列表框中选择“9600”，因为这是串口的最高通信速率，其他各选项统统采用默认值。单击“确定”按钮，如果通信正常的话就会出现类似于如下所示的主配置界面，并会在这个窗口中就会显示交换机的初始配置情况。</P>
+<P style="TEXT-INDENT: 2em">
+<TABLE cellSpacing=0 cellPadding=4 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top height="100%"><A 
+      href="http://www.chinadforce.com/misc.php?action=viewratings&amp;tid=218411&amp;pid=3312043"></A>交换机配置全接触(2) 
+
+      <P></P>
+      <P style="TEXT-INDENT: 2em"></P>
+      <P style="TEXT-INDENT: 2em">引用:</P>
+      <P style="TEXT-INDENT: 2em">Catalyst 1900 Management Console</P>
+      <P style="TEXT-INDENT: 2em">　　Copyright　（c）　Cisco Systems，　Inc。 
+      1993－1999</P>
+      <P style="TEXT-INDENT: 2em">　　All rights reserved。</P>
+      <P style="TEXT-INDENT: 2em">　　Standard Edition Software</P>
+      <P style="TEXT-INDENT: 2em">　　Ethernet address：　00－E0－1E－7E－B4－40</P>
+      <P style="TEXT-INDENT: 2em">　　PCA Number：　73－2239－01</P>
+      <P style="TEXT-INDENT: 2em">　　PCA Serial Number：　SAD01200001</P>
+      <P style="TEXT-INDENT: 2em">　　Model Number：　WS－C1924－A</P>
+      <P style="TEXT-INDENT: 2em">　　System Serial Number：　FAA01200001</P>
+      <P style="TEXT-INDENT: 2em">　　－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－</P>
+      <P style="TEXT-INDENT: 2em">　　User Interface Menu</P>
+      <P style="TEXT-INDENT: 2em">　　［M］　Menus　　／／主配置菜单</P>
+      <P style="TEXT-INDENT: 2em">　　［I］　IP Configuration　　／／IP地址等配置</P>
+      <P style="TEXT-INDENT: 2em">　　［P］　Console Password　／／控制密码配置</P>
+      <P style="TEXT-INDENT: 2em">　　Enter 
+      Selection：　　／／在此输入要选择项的快捷字母，然后按回车键确认</P>
+      <P style="TEXT-INDENT: 2em">　　【注】“／／”后面的内容为笔者对前面语句的解释，下同。</P>
+      <P style="TEXT-INDENT: 2em">　　至此就正式进入了交换机配置界面了，下面的工作就可以正式配置交换机了。</P>
+      <P style="TEXT-INDENT: 2em">　　3、交换机的基本配置</P>
+      <P 
+      style="TEXT-INDENT: 2em">　　进入配置界面后，如果是第一次配置，则首先要进行的就是IP地址配置，这主要是为后面进行远程配置而准备。IP地址配置方法如下：</P>
+      <P style="TEXT-INDENT: 2em">　　在前面所出现的配置界面“Enter 
+      Selection：”后中输入“I”字母，然后单击回车键，则出现如下配置信息： 　　</P>
+      <P style="TEXT-INDENT: 2em">引用:</P>
+      <P style="TEXT-INDENT: 2em">The IP Configuration Menu appears。</P>
+      <P style="TEXT-INDENT: 2em">　　Catalyst 1900　－　IP Configuration</P>
+      <P style="TEXT-INDENT: 2em">　　Ethernet Address：00－E0－1E－7E－B4－40</P>
+      <P style="TEXT-INDENT: 2em">　　－－－－－－－－－－－－－Settings－－－－－－－－－－－－－－－－－－</P>
+      <P style="TEXT-INDENT: 2em">　　［I］　IP address</P>
+      <P style="TEXT-INDENT: 2em">　　［S］　Subnet mask</P>
+      <P style="TEXT-INDENT: 2em">　　［G］　Default gateway</P>
+      <P style="TEXT-INDENT: 2em">　　［B］　Management Bridge Group</P>
+      <P style="TEXT-INDENT: 2em">　　［M］　IP address of DNS server 1</P>
+      <P style="TEXT-INDENT: 2em">　　［N］　IP address of DNS server 2</P>
+      <P style="TEXT-INDENT: 2em">　　［D］　Domain name</P>
+      <P style="TEXT-INDENT: 2em">　　［R］　Use Routing Information Protocol</P>
+      <P style="TEXT-INDENT: 2em">　　－－－－－－－－－－－－－Actions－－－－－－－－－－－－－－－－－－－</P>
+      <P style="TEXT-INDENT: 2em">　　［P］　Ping</P>
+      <P style="TEXT-INDENT: 2em">　　［C］　Clear cached DNS entries</P>
+      <P style="TEXT-INDENT: 2em">　　［X］　Exit to previous menu</P>
+      <P style="TEXT-INDENT: 2em">　　Enter Selection：　</P>
+      <P style="TEXT-INDENT: 2em">　　在以上配置界面最后的“Enter 
+      Selection：”后再次输入“I”字母，选择以上配置菜单中的“IP 
+      address选项，配置交换机的IP地址，单击回车键后即出现如下所示配置界面：</P>
+      <P style="TEXT-INDENT: 2em">　　Enter administrative IP address in dotted 
+      quad format　（nnn。nnn。nnn。nnn）：　／／按”nnn。nnn。nnn。nnn“格式输入IP地址</P>
+      <P style="TEXT-INDENT: 2em">　　Current 
+      setting　＝＝＝＞　0.0.0.0　／／交换机没有配置前的IP地址为”0.0.0.0“，代表任何IP地址</P>
+      <P style="TEXT-INDENT: 2em">　　New setting　＝＝＝＞　／／在此处键入新的IP地址</P>
+      <P 
+      style="TEXT-INDENT: 2em">　　如果你还想配置交换机的子网掩码和默认网关，在以上IP配置界面里面分别选择”S“和”G“项即可。现在我们再来学习一下密码的配置：</P>
+      <P style="TEXT-INDENT: 2em">　　在以上IP配置菜单中，选择”X“项退回到前面所介绍的交换机配置界面。</P>
+      <P 
+      style="TEXT-INDENT: 2em">　　输入”P“字母后按回车键，然后在出现的提示符下输入一个4￣8位的密码（为安全起见，在屏幕上都是以”＊“号显示），输入好后按回车键确认，重新回到以上登录主界面。</P>
+      <P 
+      style="TEXT-INDENT: 2em">　　在你配置好IP和密码后，交换机就能够按照默认的配置来正常工作。如果想更改交换机配置以及监视网络状况，你可以通过控制命令菜单，或者是在任何地方通过基于WEB的Catalyst 
+      1900 Switch Manager来进行操作。</P>
+      <P style="TEXT-INDENT: 2em">　　如果交换机运行的是Cisco Catalyst 
+      1900／2820企业版软件。你可以通过命令控制端口（command－line interface 
+      CLI）来改变配置。当进入配置主界面后，就在显示菜单多了项”Command Line“，而少了项”Console 
+      Password“，它在下级菜单中进行。</P>
+      <P style="TEXT-INDENT: 2em">　　1 user（s）　now active on Management 
+      Console。</P>
+      <P style="TEXT-INDENT: 2em">　　User Interface Menu</P>
+      <P style="TEXT-INDENT: 2em">　　［M］　Menus</P>
+      <P style="TEXT-INDENT: 2em">　　［K］　Command Line</P>
+      <P style="TEXT-INDENT: 2em">　　［I］　IP Configuration</P>
+      <P style="TEXT-INDENT: 2em">　　Enter Selection：</P>
+      <P 
+      style="TEXT-INDENT: 2em">　　在这一版本中的配置方法与前面所介绍的配置方法基本一样，不同的只是在这一版本中可以通过命令方式（选择”［K］　Command 
+      Line“项即可）进行一些较高级配置，下面本文仅作简单介绍，在下篇中将介绍一个常见的高级配置，那就是VLAN的配置。</P>
+      <P style="TEXT-INDENT: 2em">　　4、交换机高级配置的常见命令</P>
+      <P style="TEXT-INDENT: 2em">　　在交换机的高级配置中，通常是利用以上配置菜单中的”［K］　Command 
+      Line“项进行的。</P>
+      <P style="TEXT-INDENT: 2em">　　Cisco交换机所使用的软件系统为Catalyst 
+      IOS。CLI的全称为”Command－Line 
+      Interface“，中文名称就称之为”命令行界面“，它是一个基于DOS命令行的软件系统模式，对大小写不敏感（即不区分大小写）。有这种模式的不仅交换机有、路由器、防火墙都有，其实就是一系列相关命令，但它与DOS命令不同，CLI可以缩写命令与参数，只要它包含的字符足以与其他当前可用至的命令和参数区别开来即可。虽然对交换机的配置和管理也可以通过多种方式实现，既可以使用纯字符形式的命令行和菜单（Menu），也可以使用图形界面的Web浏览器或专门的网管软件（如CiscoWorks 
+      2000）。相比较而言，命令行方式的功能更强大，但掌握起来难度也更大些。下面把交换机的一些常用的配置命令介绍如下。 　　Cisco 
+      IOS共包括6种不同的命令模式：User EXEC模式、Privileged EXEC模式、VLAN dataBase模式、Global 
+      configuration模式、Interface configuration模式和Line 
+      configuration模式。当在不同的模式下，CLI界面中会出现不同的提示符。为了方便大家的查找和使用，表1列出了6种CLI命令模式的用途、提示符、访问及退出方法。</P>
+      <P style="TEXT-INDENT: 2em">Cisco 
+      IOS命令需要在各自的命令模式下才能执行，因此，如果想执行某个命令，必须先进入相应的配置模式。例如”interface 
+      type＿number“命令只能在”Global configuration“模式下执行，而”duplex 
+      full－flow－control“命令却只能在”Interface configuration“模式下执行。</P>
+      <P 
+      style="TEXT-INDENT: 2em">　　在交换机CLI命令中，有一个最基本的命令，那就是帮助命令”？“，在任何命令模式下，只需键入”？“，即显示该命令模式下所有可用到的命令及其用途，这就交换机的帮助命令。另外，还可以在一个命令和参数后面加”？“，以寻求相关的帮助。</P>
+      <P style="TEXT-INDENT: 2em">　　例如，我们想看一下在”Privileged 
+      Exec“模式下在哪些命令可用，那么，可以在”＃“提示符下键入”？“，并回车。再如，如果想继续查看”Show“命令的用法，那么，只需键入”show　？“并回车即可。另外，”？“还具有局部关键字查找功能。也就是说，如果只记得某个命令的前几个字符，那么，可以使用”？“让系统列出所有以该字符或字符串开头的命令。但是，在最后一个字符和”？“之间不得有空格。例如，在”Privileged 
+      Exec“模式下键入”c？“，系统将显示以”c“开头的所有命令。</P>
+      <P style="TEXT-INDENT: 2em">　　还要说明的一点是：Cisco 
+      IOS命令均支持缩写命令，也就是说，除非您有打字的癖好，否则根本没有必要键入完整的命令和关键字，只要键入的命令所包含的字符长到足以与其他命令区别就足够了。例如，可将”show 
+      configure“命令缩写为”sh conf“，可将”show configure“命令缩写为”sh conf“然后回车执行即可。</P>
+      <P style="TEXT-INDENT: 2em">　　以上介绍了命令方式下的常见配置命令，由于配置过程比较复杂，在此不作详细介绍。</P>
+      <P style="TEXT-INDENT: 2em">[<I> Last edited by longtian777 on 2005-3-19 
+      at 18:49 </I>]</P>
+      <P style="TEXT-INDENT: 2em"><IMG 
+      src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/image.gif" border=0><A 
+      href="http://www.chinadforce.com/member.php?action=credits&amp;view=getattach">图片附件</A>: 
+      <A href="http://www.chinadforce.com/attachment.php?aid=150649">111.bmp</A> 
+      (2005-3-18 09:41, 1.24 M)</P>
+      <P style="TEXT-INDENT: 2em"><IMG 
+      src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/111_G1uVeXBaMhv5.bmp" 
+      border=0>screen.width*0.7) {this.resized=true; 
+      this.width=screen.width*0.7; this.alt='点击在新窗口查看全图\nCTRL+鼠标滚轮放大或缩小';}" 
+      border=0 pop="点击在新窗口查看全图 CTRL+鼠标滚轮放大或缩小" resized="true"&gt; </P></TD></TR>
+  <TR>
+    <TD vAlign=bottom>
+      <P></P>
+      <P style="TEXT-INDENT: 2em"></P></TD></TR></TBODY></TABLE></P>
+<P style="TEXT-INDENT: 2em">交换机配置全接触(3)</P>
+<P style="TEXT-INDENT: 2em">二、远程配置方式</P>
+<P 
+style="TEXT-INDENT: 2em">　　我们上面就已经介绍过交换机除了可以通过Console端口与计算机直接连接外，还可以通过交换机的普通端口进行连接。如果是堆栈型的，也可以把几台交换机堆在一起进行配置，因为这时实际上它们是一个整体，一般只有一台具有网管能力。这时通过普通端口对交换机进行管理时，就不再使用超级终端了，而是以Telnet或Web浏览器的方式实现与被管理交换机的通信。因为我们在前面的本地配置方式中已为交换机配置好了IP地址，我们可通过IP地址与交换机进行通信，不过要注意，同样只有是网管型的交换机才具有这种管理功能。因为这种远程配置方式中又可以通过两种不同的方式来进行，所以我们也就分别介绍。</P>
+<P style="TEXT-INDENT: 2em">　　1、Telnet方式</P>
+<P 
+style="TEXT-INDENT: 2em">　　Telnet协议是一种远程访问协议，可以用它登录到远程计算机、网络设备或专用TCP／IP网络。Windows 
+95／98及其以后的Windows系统、UNIX／Linux等系统中都内置有Telnet客户端程序，我们就可以用它来实现与远程交换机的通信。</P>
+<P style="TEXT-INDENT: 2em">　　在使用Telnet连接至交换机前，应当确认已经做好以下准备工作：</P>
+<P style="TEXT-INDENT: 2em">　　·在用于管理的计算机中安装有TCP／IP协议，并配置好了IP地址信息。</P>
+<P 
+style="TEXT-INDENT: 2em">　　·在被管理的交换机上已经配置好IP地址信息。如果尚未配置IP地址信息，则必须通过Console端口进行设置。</P>
+<P 
+style="TEXT-INDENT: 2em">　　·在被管理的交换机上建立了具有管理权限的用户帐户。如果没有建立新的帐户，则Cisco交换机默认的管理员帐户为”Admin“。</P>
+<P style="TEXT-INDENT: 2em">　　在计算机上运行Telnet客户端程序（这个程序在Windows 
+系统中与UNIX、Linux系统中都有，而且用法基本是是兼容的，特别是在Windows 
+2000系统中的Telnet程序），并登录至远程交换机。如果我们前面已经设置交换机的IP地址为：61.159.62.182，下面只介绍进入配置界面的方法，至于如何配置那是比较多的，要视具体情况而定，不作具体介绍。进入配置界面步骤很简单，只需简单的两步：</P>
+<P style="TEXT-INDENT: 2em">　　第1步：单击”开始“按钮选择”运行“菜单项，然后在对话框中按”telnet 
+61.159.62.182“格式输入登录（当然也可先不输入IP地址，在进入telnet主界面后再进行连接，但是这样会多了一步，直接在后面输入要连接的IP的地址更好些），如图8所示。如果为交换机配置了名称，则也可以直接在”Telnet“命令后面空一个空格后输入交换机的名称。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/20040106036.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图8</P>
+<P style="TEXT-INDENT: 2em">　　Telnet命令的一般格式如下： </P>
+<P style="TEXT-INDENT: 2em">　　telnet 
+［Hostname／port］，这里要注意的是”Hostnqme包括了交换机的名称，但更多的是我们在前面是为交换机配置了IP地址，所以在这里更多的是指交换机的IP地址。格式后面的“Port”一般是不需要输入的，它是用来设定Telnet通信所用的端口的，一般来说Telnet通信端口，在TCP／IP协议中有规定，为23号端口，最好不用改它，也就是说我们可以不接这个参数。</P>
+<P 
+style="TEXT-INDENT: 2em">　　第2步，输入好后，单击“确定”按钮，或单击回车键，建立与远程交换机的连接。如图9所示为与计算机通过Tetnet与Catalyst 
+1900交换机建立连接时显示的界面。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/20040106037.gif" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图9</P>
+<P style="TEXT-INDENT: 2em">　　在图中显示了包括两个菜单项的配置菜单：Menus、Command 
+Line。然后，就可以根据实际需要对该交换机进行相应的配置和管理了。</P>
+<P style="TEXT-INDENT: 2em">　　2、Web浏览器的方式</P>
+<P 
+style="TEXT-INDENT: 2em">　　当利用Console口为交换机设置好IP地址信息并启用HTTP服务后，即可通过支持JAVA的Web浏览器访问交换机，并可通过Web通过浏览器修改交换机的各种参数并对交换机进行管理。事实上，通过Web界面，可以对交换机的许多重要参数进行修改和设置，并可实时查看交换机的运行状态。不过在利用Web浏览器访问交换机之前，应当确认已经做好以下准备工作：</P>
+<P 
+style="TEXT-INDENT: 2em">　　·在用于管理的计算机中安装TCP／IP协议，且在计算机和被管理的交换机上都已经配置好IP地址信息。</P>
+<P style="TEXT-INDENT: 2em">　　·用于管理的计算机中安装有支持JAVA的Web浏览器，如Internet Explorer 
+4.0及以上版本、Netscape 4.0及以上版本，以及Oprea with JAVA。</P>
+<P style="TEXT-INDENT: 2em">　　·在被管理的交换机上建立了拥有管理权限的用户帐户和密码。</P>
+<P style="TEXT-INDENT: 2em">　　·被管理交换机的Cisco 
+IOS支持HTTP服务，并且已经启用了该服务。否则，应通过Console端口升级Cisco IOS或启用HTTP服务。</P>
+<P style="TEXT-INDENT: 2em">　　通过Web浏览器的方式进行配置的方法如下：</P>
+<P 
+style="TEXT-INDENT: 2em">　　第1步：把计算机连接在交换机的一个普通端口上，在计算机上运行Web浏览器。在浏览器的“地址”中栏键入被管理交换机的IP地址（如61.159.62.182）或为其指定的名称。单击回车键，弹出如图10所示对话框。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/20040106038.jpg" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图10</P>
+<P 
+style="TEXT-INDENT: 2em">　　第2步：分别在“用户名”和“密码”框中，键入拥有管理权限的用户名和密码。用户名／密码对应当事先通过Console端口进行设置。</P>
+<P 
+style="TEXT-INDENT: 2em">　　第3步：单击“确定”按钮，即可建立与被管理交换机的连接，在Web浏览器中显示交换机的管理界面。如图11所示页面为与Cisco 
+Catalyst 
+1900建立连接后，显示在Web浏览器中的配置界面。首先看到的是要求输入用户帐号和密码，这时您就输入在上面已设置好的交换机配置超级用户帐号和密码进入系统。</P>
+<P style="TEXT-INDENT: 2em"><IMG 
+src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/20040106039.gif" border=0>screen.width*0.7) 
+{this.resized=true; this.width=screen.width*0.7; this.alt='Click here to open 
+new window\nCTRL+Mouse wheel to zoom in/out';}" border=0&gt;</P>
+<P style="TEXT-INDENT: 2em">图11</P>
+<P 
+style="TEXT-INDENT: 2em">　　接下来，就可以通过Web界面中的提示，一步步查看交换机的各种参数和运行状态，并可根据需要对交换机的某些参数作必要的修改</P>
+<P style="TEXT-INDENT: 2em"></P></DIV></DIV></DIV>
+<DIV class=g_t_center>
+<DIV class="g_t_left g_p_center" 
+id=relateBlogCircle__fks_r9LTlcJWbXqdxsWseXBdzQ== 
+style="WIDTH: 760px"></DIV></DIV>
+<DIV class="g_tab_btn00 g_t_left g_c_mvdn g_h_18 bd1b" id=blogCssTabBar>
+<DIV class=c08>36次阅读</DIV>
+<DIV class="bd1l bd1r" id=openPermaDiv_fks_r9LTlcJWbXqdxsWseXBdzQ==><A class=c05 
+onclick="NEBlog.gPermaLinkPage.upDownCssTabBar('openPermaDiv_fks_r9LTlcJWbXqdxsWseXBdzQ==');NEBlog.gPermaLinkPage.openPermalink('_fks_r9LTlcJWbXqdxsWseXBdzQ==', 'blog/static/611517200723113231683');return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">固定链接<SPAN 
+class="n_ n32 g_p_none">&nbsp;</SPAN></A></DIV>
+<DIV class="bd1l bd1r"><A class=c05 id=shareBlog 
+onclick="NEBlog.gPermaLinkPage.showShareDiv('shareBlog', 'blog/static/611517200723113231683', '图解:交换机配置全接触');return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">分享</A></DIV>
+<DIV class="bd1l bd1r" id=openTbDiv_fks_r9LTlcJWbXqdxsWseXBdzQ==><A class=c05 
+onclick="NEBlog.gPermaLinkPage.upDownCssTabBar('openTbDiv_fks_r9LTlcJWbXqdxsWseXBdzQ==');NEBlog.gPermaLinkPage.openTrackbacks('_fks_r9LTlcJWbXqdxsWseXBdzQ==', 'blog/611517200723113231683.track');return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">引用 
+(0)<SPAN class="n_ n32 g_p_none">&nbsp;</SPAN></A></DIV>
+<DIV class="bd1l bd1r s" id=openComDiv_fks_r9LTlcJWbXqdxsWseXBdzQ==><A class=c05 
+onclick="NEBlog.gPermaLinkPage.upDownCssTabBar('openComDiv_fks_r9LTlcJWbXqdxsWseXBdzQ==');NEBlog.gPermaLinkPage.openComments('_fks_r9LTlcJWbXqdxsWseXBdzQ==', 0, -100, '图解:交换机配置全接触', 'blog/static/611517200723113231683');return false;" 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683/#">评论 (<NOBR 
+id=comCount__fks_r9LTlcJWbXqdxsWseXBdzQ==>0</NOBR>)<SPAN 
+class="n_ n32 g_p_none">&nbsp;</SPAN></A></DIV>
+<DIV class=c09>　2007年 03月31日 13:32</DIV><INPUT 
+id=openPerma__fks_r9LTlcJWbXqdxsWseXBdzQ== type=hidden value=0><!--0表示关闭，1表示打开--> <INPUT id=openCom__fks_r9LTlcJWbXqdxsWseXBdzQ== 
+type=hidden value=1><!--0表示关闭，1表示打开，2表示数据未生成--> <INPUT 
+id=openTrack__fks_r9LTlcJWbXqdxsWseXBdzQ== type=hidden value=2><!--0表示关闭，1表示打开，2表示数据未生成--> </DIV>
+<DIV class="g_p_clear g_t_space"></DIV>
+<DIV class=g_t_left id=perma__fks_r9LTlcJWbXqdxsWseXBdzQ== 
+style="DISPLAY: none">
+<DIV class="g_h_20 g_c_mvdn"><SPAN class="g_p_right g_c_hand n_ n7" 
+id=aClosePerma_fks_r9LTlcJWbXqdxsWseXBdzQ== title=关闭 
+onclick="NEBlog.gPermaLinkPage.closeCssTabBarAll('_fks_r9LTlcJWbXqdxsWseXBdzQ==');NEBlog.gPermaLinkPage.closePermalink('_fks_r9LTlcJWbXqdxsWseXBdzQ==');return false;"></SPAN> 
+</DIV>
+<DIV class=g_c_pdin>
+<DIV>本文的固定不变链接:&nbsp;&nbsp;<SPAN class="n_ f17" 
+id=permCopyFinished__fks_r9LTlcJWbXqdxsWseXBdzQ== 
+style="DISPLAY: none">复制引用链接成功</SPAN></DIV>
+<DIV><A id=aPerma_fks_r9LTlcJWbXqdxsWseXBdzQ== 
+href="http://hbq620.blog.163.com/blog/static/611517200723113231683" 
+target=_blank>http://hbq620.blog.163.com/blog/static/611517200723113231683</A>&nbsp; 
+<A class="g_c_button bd01 butn c05" id=copyPerma_fks_r9LTlcJWbXqdxsWseXBdzQ== 
+title=复制引用链接 
+onclick="clickTBUrl('aPerma_fks_r9LTlcJWbXqdxsWseXBdzQ==', 'permCopyFinished__fks_r9LTlcJWbXqdxsWseXBdzQ==')">复　制</A> 
+</DIV></DIV></DIV>
+<DIV class="g_p_relative g_h_1" id=com__fks_r9LTlcJWbXqdxsWseXBdzQ==>
+<DIV id=comShow__fks_r9LTlcJWbXqdxsWseXBdzQ==></DIV>
+<DIV class=g_h_1 id=comPub__fks_r9LTlcJWbXqdxsWseXBdzQ==>正在加载评论...</DIV></DIV>
+<DIV class=g_t_left id=track__fks_r9LTlcJWbXqdxsWseXBdzQ== 
+style="DISPLAY: none"></DIV></DIV><!-- 生成模块脚本 -->
+<SCRIPT language=JavaScript>
+    function initPage(){
+        var _$$_blog_perma = new netease.ui.module.Module("日志","_$$_blog_perma_menu",$("_$$_blog_perma"),null,"",{parent:"_$$_module_container_center"});
+
+		gLoadPermaLink('hbq620.blog.163.com','http://st.blog.163.com/style/common/','_fks_r9LTlcJWbXqdxsWseXBdzQ==', 611517, 100, 0, 
+				-100, 0, '', '匿名',
+				'http://st.blog.163.com/style/common/user_default.gif', '202.117.81.6', 'hbq620', '', -100,
+				'图解:交换机配置全接触', 'blog/static/611517200723113231683', '611517200723113231683', 
+				'comShow__fks_r9LTlcJWbXqdxsWseXBdzQ==', 'comPub__fks_r9LTlcJWbXqdxsWseXBdzQ==', 'http://q.163.com', 
+				'off');
+    }
+  </SCRIPT>
+</DIV></DIV>
+<SCRIPT language=JavaScript>
+// <![CDATA[
+    	var g_urlPrefix="";
+       function g_initCommon(){
+       } 
+       function g_initUtil(){
+				loadEventRemind(true);
+				showNetEaseFocusMe(0,'hbq620.blog.163.com');
+			g_initCommon();       		
+       }
+//       window.attachEvent && window.attachEvent("onload",g_initUtil) 
+ //                         || window.addEventListener("load",g_initUtil,false);
+       g_initUtil();          
+// ]]>
+</SCRIPT>
+
+<SCRIPT type=text/JavaScript>
+// <![CDATA[ 
+
+//登陆用户保活
+
+// ]]>
+</SCRIPT>
+
+<STYLE type=text/css>#messageZone {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 12px; RIGHT: 20px; BACKGROUND: #ffffae; PADDING-BOTTOM: 4px; WIDTH: 100px; PADDING-TOP: 4px; FONT-FAMILY: Arial,Helvetica,sans-serif; POSITION: absolute; TOP: 0px
+}
+</STYLE>
+
+<SCRIPT src="图解交换机配置全接触 - 洪尘俗客 - 网易博客.files/InfoAlertPad.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript>
+    <!--
+       // 防止覆盖掉之前的window.onload
+       // 如果能确保dispatcher.ftl放在最后，这里可以直接调用initPage
+       //document.ready(initPage);
+      // window.attachEvent && window.attachEvent("onload",initPageWrap) 
+        //                  || window.addEventListener("load",initPageWrap,false);          
+
+     initPage();
+    //-->
+    </SCRIPT>
+<!-- START NetEase Devilfish 2006 -->
+<SCRIPT language=JavaScript>
+<!--
+    var oJS;
+    function setScript(){
+        oJS = document.getElementById("$$__$$");
+        oJS.src = 'http://analytics.163.com/ntes.js';
+        oJS.attachEvent && oJS.attachEvent("onreadystatechange",doAnaly);
+    }
+    function doAnaly(){
+        if (oJS && oJS.readyState && oJS.readyState!="loaded"){
+            return;
+        }
+        // do analytics
+       _ntes_nacc = "blog";
+	neteaseTracker();
+     }
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript id=$$__$$ onload="doAnaly();"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+  if (!document.all){
+      window.addEventListener("load",setScript,false); 
+  }else{
+      window.attachEvent("onload",setScript);
+  }
+//-->
+</SCRIPT>
+<!-- END NetEase Devilfish 2006 --></BODY></HTML>

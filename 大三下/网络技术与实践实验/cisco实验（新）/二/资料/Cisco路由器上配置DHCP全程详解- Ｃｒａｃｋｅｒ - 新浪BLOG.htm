@@ -1,0 +1,300 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://blog.sina.com.cn/u/56fdccdb0100070l -->
+<HTML xmlns:sns = "http://blog.sina.com.cn/sns"><HEAD><TITLE>Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META content=Ｃｒａｃｋｅｒ,1459473627 name=Author>
+<META content="Cisco Docu（屎壳Ｑ岛）,Ｃｒａｃｋｅｒ,Cisco路由器上配置DHCP全程详解,新浪BLOG" 
+name=Keywords>
+<META content="Cisco Docu（屎壳Ｑ岛） Ｃｒａｃｋｅｒ Cisco路由器上配置DHCP全程详解 新浪BLOG" 
+name=Description><LINK media=all 
+href="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/ubb.css" type=text/css 
+rel=Stylesheet><LINK media=all 
+href="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/3.css" type=text/css 
+rel=Stylesheet><LINK media=all 
+href="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/article.css" type=text/css 
+rel=Stylesheet><LINK media=all 
+href="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/comment070521.css" 
+type=text/css rel=Stylesheet>
+<SCRIPT language=javascript 
+src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/base.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript 
+src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/dialog_utf8.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript 
+src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/x.htm" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript 
+src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/3.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript type=text/javascript>var THEME = '3';
+					var UID = '1459473627';
+					var AUTHOR = 'Ｃｒａｃｋｅｒ';
+					var bc = {};
+					bc.show = function () {};</SCRIPT>
+
+<META content="MSHTML 6.00.2900.3086" name=GENERATOR></HEAD>
+<BODY class=bodyBox><IFRAME style="DISPLAY: none" name=post 
+src="about:blank"></IFRAME>
+<SCRIPT type=text/javascript>var sModule = {};
+							var sDiy = "calendar:8,photo:1,bannar:5,menu:1,box_1:10,box_2:1,bg:5,music:1".split(',');
+
+							for(key in sDiy)
+							{
+								aK = sDiy[key].split(':');
+								sModule[aK[0]] = aK[1];
+							}
+
+							var sPhoto = sModule['photo'];
+							var sBanner = sModule['bannar'];
+							var sMenu = sModule['menu'];
+							var sBox_1 = sModule['box_1'];
+							var sBox_2 = sModule['box_2'];
+							var sBg = sModule['bg'];
+							var sCalendar = iCalendarMax == 0 ? 0 : sModule['calendar'];
+							var sRanCss1 = '<link rel="Stylesheet" type="text/css" href="http://image2.sina.com.cn/blog/tmpl/v3/cache/css/'+THEME+'_1/'+sPhoto+'/'+sBanner+'_'+sMenu+'.css" media="all">';
+							var sRanCss2 = '<link rel="Stylesheet" type="text/css" href="http://image2.sina.com.cn/blog/tmpl/v3/cache/css/'+THEME+'_2/'+sBox_1+'/'+sBox_2+'_'+sBg+'.css" media="all">';
+							document.write(sRanCss1 + sRanCss2);</SCRIPT>
+
+<TABLE class=bodytop cellSpacing=0 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD style="PADDING-LEFT: 5px" align=left width=185><A 
+      href="http://blog.sina.com.cn/" target=_blank><IMG 
+      src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/logo.gif" 
+border=0></A></TD>
+    <TD style="PADDING-TOP: 14px" align=left width=200>
+      <SCRIPT language=javascript type=text/javascript>BROWSER == "ie5" ? dw('<script language="javascript" type="text/javascript" src="/js/head_gbk.js"></scr' + 'ipt>') : dw('<script language="javascript" type="text/javascript" src="/js/head_utf8.js"></scr' + 'ipt>');</SCRIPT>
+    </TD>
+    <TD style="PADDING-RIGHT: 5px; PADDING-TOP: 14px" align=right width=395>
+      <SCRIPT language=javascript src="" type=text/javascript></SCRIPT>
+    </TD></TR></TBODY></TABLE>
+<TABLE class=bodyBg cellSpacing=0 cellPadding=0 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD class=banner>
+      <TABLE class=title cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD width=20></TD>
+          <TD>Cisco Docu（屎壳Ｑ岛）</TD>
+          <TD width=20></TD></TR></TBODY></TABLE>
+      <TABLE class=link cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD width=20></TD>
+          <TD><A 
+            href="http://blog.sina.com.cn/cisco">http://blog.sina.com.cn/cisco</A>﹥<A 
+            onclick="setCopy('http://blog.sina.com.cn/cisco');new dialog().event('　　已经把该BLOG网址复制到系统剪贴板，您可以使用（Ctrl+V或鼠标右键）粘贴功能，通过其他软件记录或发送给您的朋友。','void 0')" 
+            href="javascript:;">复制</A>　﹥<A onclick=setHome() 
+            href="javascript:;">收藏本页</A></TD>
+          <TD width=20></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE class=bodyBg cellSpacing=0 cellPadding=0 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD class=menu>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=home><A href="http://blog.sina.com.cn/" 
+            target=_blank>博客首页</A><INPUT id=HOME 
+            style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; WIDTH: 0px; BORDER-BOTTOM: 0px; HEIGHT: 0px"></TD>
+          <TD class=text id=login align=right>
+            <SCRIPT language=javascript 
+            src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/checkzone3.htm" 
+            type=text/javascript charset=UTF-8></SCRIPT>
+          </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE class="sysW770 bodyBg" cellSpacing=0 cellPadding=0 align=center 
+  border=0><TBODY>
+  <TR>
+    <TD vAlign=top>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=box_1 vAlign=top>
+            <DIV class=margin></DIV>
+            <DIV class=margin id=box_1>
+            <DIV class=photo>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD class=top></TD></TR>
+              <TR>
+                <TD class=mid align=middle>
+                  <TABLE cellSpacing=0 cellPadding=0 align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=middle>
+                        <DIV class=image><IMG alt=Ｃｒａｃｋｅｒ 
+                        onerror="this.src='http://image2.sina.com.cn/blog/tmpl/v3/images/default_icon.jpg';this.onerror='';" 
+                        src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/56fdccdb02000001.jpg" 
+                        onload=resizeImg(this,180) align=middle 
+                      border=1></DIV></TD></TR>
+                    <TR>
+                      <TD>
+                        <SCRIPT>
+													function invite_friend(){
+														bcDialog.show("http://blog.sina.com.cn/control/friend/add_friend.php?opid=" + UID, 274, 255);
+														bc.hidden();
+													}
+													function send_message(){
+														bcDialog.show("http://blog.sina.com.cn/myblog/message/send_message.php?toid=" + UID, 274, 100);
+														bc.hidden();
+													}
+													function showCard(e,l){
+														e = e || window.event;
+														bc.show(UID,e,null,l);
+													}
+												</SCRIPT>
+
+                        <DIV class=infoText 
+                        style="BORDER-TOP: #6a6a6a 0px dashed; PADDING-BOTTOM: 10px; MARGIN: 8px 14px"><A 
+                        style="MARGIN-RIGHT: 5px" 
+                        onclick="showCard(event,'alphoto');return false;" 
+                        href="javascript:void(0);"><IMG 
+                        style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; MARGIN-BOTTOM: 2px; BORDER-LEFT: 0px; CURSOR: hand; BORDER-BOTTOM: 0px" 
+                        alt=查看个人名片 
+                        src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/bloger_card_icon.gif" 
+                        align=absMiddle></A><A 
+                        href="http://blog.sina.com.cn/cisco">Ｃｒａｃｋｅｒ</A></DIV>
+                        <DIV 
+                        style="BORDER-RIGHT: #000 0px dashed; BORDER-TOP: #000 0px dashed; BORDER-LEFT: #000 0px dashed; BORDER-BOTTOM: #000 0px dashed; TEXT-ALIGN: center"><A 
+                        style="MARGIN-RIGHT: 10px" 
+                        href="javascript:invite_friend()"><IMG 
+                        style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" 
+                        src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/invite_index.gif"></A><A 
+                        href="javascript:send_message()"><IMG 
+                        style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" 
+                        src="Cisco路由器上配置DHCP全程详解- Ｃｒａｃｋｅｒ - 新浪BLOG.files/send_index.gif"></A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD class=bottom></TD></TR></TBODY></TABLE>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR class=line>
+                <TD></TD></TR></TBODY></TABLE></DIV>
+            <DIV id=labelFM000009>
+            <SCRIPT src=""></SCRIPT>
+            </DIV>
+            <DIV class=links>
+            <TABLE id=linksFM000008 cellSpacing=0 cellPadding=0 width="100%" 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR class=sysHand 
+                    onclick="javascript:hide('linkBodyFM0000083');swap('linkTitleFM0000083','className','up','down');">
+                      <TD class=up id=linkTitleFM0000083>
+                        <DIV 
+                  class="sysBr180 text">我的文章分类</DIV></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=linkBodyFM0000083>
+                <TD class=mid>
+                  <TABLE height=6>
+                    <TBODY>
+                    <TR>
+                      <TD></TD></TR></TBODY></TABLE>
+                  <TABLE class=wd cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV class=sysBr180><A title="" 
+                              onclick="this.href='#sort_0';get('/sns/service.php?m=aList&amp;uid=1459473627&amp;sort_id=0', '/xsl/aList.xsl', 'aList_0', 'output', 'box_2')" 
+                              href="http://blog.sina.com.cn/u/56fdccdb0100070l#sort_0" 
+                              target=_self>我的所有文章</A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV class=sysBr180><A title="" 
+                              onclick="this.href='#sort_2';get('/sns/service.php?m=aList&amp;uid=1459473627&amp;sort_id=2', '/xsl/aList.xsl', 'aList_2', 'output', 'box_2')" 
+                              href="http://blog.sina.com.cn/u/56fdccdb0100070l#sort_2" 
+                              target=_self>~~~　Security　~~~</A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV class=sysBr180><A title="" 
+                              onclick="this.href='#sort_3';get('/sns/service.php?m=aList&amp;uid=1459473627&amp;sort_id=3', '/xsl/aList.xsl', 'aList_3', 'output', 'box_2')" 
+                              href="http://blog.sina.com.cn/u/56fdccdb0100070l#sort_3" 
+                              target=_self>~~~　Qos　~~~</A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV class=sysBr180><A title="" 
+                              onclick="this.href='#sort_4';get('/sns/service.php?m=aList&amp;uid=1459473627&amp;sort_id=4', '/xsl/aList.xsl', 'aList_4', 'output', 'box_2')" 
+                              href="http://blog.sina.com.cn/u/56fdccdb0100070l#sort_4" 
+                              target=_self>~~~　Wan　~~~</A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV class=sysBr180><A title="" 
+                              onclick="this.href='#sort_5';get('/sns/service.php?m=aList&amp;uid=1459473627&amp;sort_id=5', '/xsl/aList.xsl', 'aList_5', 'output', 'box_2')" 
+                              href="http://blog.sina.com.cn/u/56fdccdb0100070l#sort_5" 
+                              target=_self>~~~　Switching 
+                          　~~~</A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV class=sysBr180><A title="" 
+                              onclick="this.href='#sort_7';get('/sns/service.php?m=aList&amp;uid=1459473627&amp;sort_id=7', '/xsl/aList.xsl', 'aList_7', 'output', 'box_2')" 
+                              href="http://blog.sina.com.cn/u/56fdccdb0100070l#sort_7" 
+                              target=_self>~~~　IGP　~~~</A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV class=sysBr180><A title="" 
+                              onclick="this.href='#sort_8';get('/sns/service.php?m=aList&amp;uid=1459473627&amp;sort_id=8', '/xsl/aList.xsl', 'aList_8', 'output', 'box_2')" 
+                              href="http://blog.sina.com.cn/u/56fdccdb0100070l#sort_8" 
+                              target=_self>~~~　BGP　~~~</A></DIV></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD class=ico vAlign=top align=middle width=20><FONT 
+                        style="FONT-SIZE: 6px">■</FONT></TD>
+                      <TD class=dashed>&lt;table width="100%" border="0" 
+                        cellpadding="0" 
+            c</TR></TBODY></TABLE></TR></TBODY></TABLE></DIV></DIV></TR></TBODY></TABLE></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,10 @@
+sCalendar = 0;
+iCalendar = 1;
+iPhotoMax = 10;
+iBannerMax = 11;
+iMenuMax = 10;
+iBox_1Max = 10;
+iBox_2Max = 10;
+iBgMax = 10;
+iCalendarMax = 0;
+iMusicMax = 10;

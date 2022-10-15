@@ -1,0 +1,291 @@
+BODY {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 150%
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 150%
+}
+A {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 150%
+}
+A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+.foot {
+	COLOR: #7f7f7f
+}
+.foot P A {
+	COLOR: #7f7f7f
+}
+.foot CENTER A {
+	COLOR: #7f7f7f
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.sysHand {
+	CURSOR: hand
+}
+.sysBr {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr180 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 180px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr210 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 210px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr476 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 476px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr500 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 500px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysLeft {
+	FLOAT: left
+}
+.sysBoth {
+	CLEAR: both
+}
+.sysW770 {
+	WIDTH: 770px
+}
+.box_1 {
+	WIDTH: 210px; TEXT-ALIGN: left
+}
+.box_1 .margin {
+	PADDING-LEFT: 3px
+}
+.box_2 {
+	TEXT-ALIGN: center
+}
+.box_2 .margin {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px
+}
+.logo {
+	PADDING-LEFT: 5px
+}
+.man {
+	MARGIN: 0px 5px
+}
+.dashed {
+	BORDER-BOTTOM: #6a6a6a 1px dashed
+}
+.line {
+	HEIGHT: 2px
+}
+.bodyBox {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/bg/1.gif); MARGIN-LEFT: 0px; MARGIN-RIGHT: 0px; TEXT-ALIGN: center
+}
+.bodyTop {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/bodyTop.gif); WIDTH: 770px; HEIGHT: 40px
+}
+.bodyBg {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/bodyBg.gif); WIDTH: 770px
+}
+.bodyBottom {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/bodyBottom.gif); WIDTH: 770px; HEIGHT: 40px
+}
+.banner {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/banner/1.jpg) #fff no-repeat center 50%; WIDTH: 770px; HEIGHT: 135px
+}
+.banner TABLE {
+	BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BACKGROUND: #fff; FILTER: alpha(opacity=70); BORDER-LEFT: #000 1px solid; LINE-HEIGHT: 30px; BORDER-BOTTOM: #000 1px solid; moz-opacity: 0.7
+}
+.banner .title {
+	MARGIN-TOP: 20px; FONT-WEIGHT: bold; MARGIN-LEFT: 120px
+}
+.banner .title TD {
+	FONT-SIZE: 16px
+}
+.banner .link {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 180px
+}
+.banner .link A {
+	COLOR: #000
+}
+.menu {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/menu/1.gif) no-repeat center 50%; PADDING-BOTTOM: 0px; WIDTH: 770px; COLOR: #444444; PADDING-TOP: 0px; HEIGHT: 22px
+}
+.menu .home {
+	COLOR: #000000; FONT-FAMILY: "Courier New", "Courier", "monospace"
+}
+.menu .text {
+	COLOR: #6a6a6a
+}
+.menu A {
+	COLOR: #333333; FONT-FAMILY: Arial,Serif
+}
+.menu .text A {
+	FONT-SIZE: 12px
+}
+.zone {
+	WIDTH: 210px
+}
+.calendar {
+	WIDTH: 210px
+}
+.calendar .mid {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/calendar/1Bg.gif); HEIGHT: 236px
+}
+.label {
+	WIDTH: 210px
+}
+.label .mid {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; LINE-HEIGHT: normal; PADDING-TOP: 8px; TEXT-ALIGN: left
+}
+.label .mid TD {
+	LINE-HEIGHT: normal
+}
+.label .top {
+	HEIGHT: 1px
+}
+.label .bottom {
+	HEIGHT: 1px
+}
+.photo {
+	WIDTH: 210px
+}
+.photo .mid {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/2/images/photo/1Bg.gif); PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.photo .image {
+	OVERFLOW: hidden; WIDTH: 200px
+}
+.photo .mid TABLE {
+	WIDTH: 200px; WORD-WRAP: break-word
+}
+.photo .infoText {
+	PADDING-RIGHT: 0px; BORDER-TOP: #6a6a6a 1px dashed; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; MARGIN: 8px 0px; PADDING-TOP: 4px; BORDER-BOTTOM: #6a6a6a 1px dashed; TEXT-ALIGN: center
+}
+.photo TABLE {
+	COLOR: #333333
+}
+.callboard {
+	WIDTH: 210px
+}
+.callboard TABLE {
+	FONT-SIZE: 12px; WIDTH: 100%; COLOR: #686868
+}
+.callboard .title {
+	PADDING-LEFT: 12px; FONT-WEIGHT: bold; COLOR: #000; HEIGHT: 22px
+}
+.callboard .bold TD {
+	FONT-WEIGHT: bold; PADDING-TOP: 2px; HEIGHT: 24px
+}
+.callboard .up {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/box_1/1Up.gif)
+}
+.callboard .down {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/box_1/1Down.gif)
+}
+.callboard .mid {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 13px; PADDING-BOTTOM: 13px; LINE-HEIGHT: normal; PADDING-TOP: 13px
+}
+.callboard .mid TD {
+	LINE-HEIGHT: normal
+}
+.callboard .mid IMG {
+	MARGIN-LEFT: 2px
+}
+.callboard .bottom {
+	HEIGHT: 1px
+}
+.callboard .front {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/callboard/front.gif); WIDTH: 29px; HEIGHT: 13px
+}
+.callboard .back {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/callboard/back.gif); WIDTH: 29px; HEIGHT: 13px
+}
+.links {
+	WIDTH: 210px
+}
+.links .up {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/box_1/1Up.gif); HEIGHT: 24px
+}
+.links .down {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/box_1/1Down.gif); HEIGHT: 24px
+}
+.links .text {
+	PADDING-LEFT: 12px; FONT-WEIGHT: bold; COLOR: #000; PADDING-TOP: 2px; HEIGHT: 22px
+}
+.links .mid {
+	
+}
+.links .wd {
+	WIDTH: 200px
+}
+.links .wd TR {
+	HEIGHT: 22px
+}
+.links .ico {
+	COLOR: #cd3f3f
+}
+.links .dashed {
+	COLOR: #333333; BORDER-BOTTOM: #9a9a9a 1px dashed
+}
+.links .more {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/more.gif) no-repeat right 50%; WIDTH: 57px; HEIGHT: 44px
+}
+.links A {
+	COLOR: #333333
+}
+.links .desc {
+	COLOR: #999999
+}
+.links .circletitle {
+	FONT-SIZE: 12px; WIDTH: 190px; COLOR: #830c0c; BACKGROUND-COLOR: #efefef
+}
+.add {
+	PADDING-RIGHT: 6px; LINE-HEIGHT: 30px; PADDING-TOP: 7px; HEIGHT: 30px; TEXT-ALIGN: right
+}
+.add .ico {
+	WIDTH: 20px; HEIGHT: 20px; TEXT-ALIGN: right
+}
+.add .text {
+	FONT-WEIGHT: bold; COLOR: #cd3f3f; FONT-FAMILY: "Courier New", "Courier", "monospace"
+}
+.add IMG {
+	MARGIN-RIGHT: 6px
+}
+.add A {
+	MARGIN-TOP: 0px; MARGIN-LEFT: 0px; COLOR: #000; MARGIN-RIGHT: 0px; PADDING-TOP: 4px
+}
+.sort {
+	COLOR: #333
+}
+.sort TD {
+	PADDING-RIGHT: 14px; PADDING-LEFT: 14px; PADDING-BOTTOM: 14px; PADDING-TOP: 14px
+}
+.sort A {
+	PADDING-RIGHT: 14px; PADDING-LEFT: 14px; PADDING-BOTTOM: 14px; COLOR: #333; PADDING-TOP: 14px
+}
+.sort SPAN {
+	FONT-WEIGHT: bold
+}
+.aList .up {
+	COLOR: #000000
+}
+.aList .down {
+	COLOR: #000000
+}
+.article .up {
+	COLOR: #000000
+}
+.article .down {
+	COLOR: #333333
+}
+.comment .up {
+	COLOR: #000000
+}
+.comment .down {
+	COLOR: #000000
+}
+.feeds .up {
+	COLOR: #000000
+}
+.feeds .down {
+	COLOR: #000000
+}
+.RR_closeButton {
+	MARGIN-TOP: 5px; FONT-SIZE: 1px; BACKGROUND-IMAGE: url(http://image2.sina.com.cn/blog/tmpl/v3/images/datong/rr_close_red.gif); MARGIN-LEFT: 8px; WIDTH: 7px; HEIGHT: 7px
+}

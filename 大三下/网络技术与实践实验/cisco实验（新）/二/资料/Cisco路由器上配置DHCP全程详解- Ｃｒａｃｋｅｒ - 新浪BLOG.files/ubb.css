@@ -1,0 +1,99 @@
+.vbbcss {
+	MARGIN: auto; FONT: 12px Courier New; WIDTH: 96%; TEXT-ALIGN: left
+}
+.vbbcss_div {
+	BORDER-RIGHT: #eeb 1px solid; BORDER-TOP: #eeb 1px solid; BACKGROUND: #ffc; BORDER-LEFT: #eeb 1px solid; BORDER-BOTTOM: #eeb 1px solid
+}
+.vbbcss_tag {
+	COLOR: #0000ff
+}
+.vbbcss_text {
+	COLOR: #000000
+}
+.vbbcss_coms1 {
+	COLOR: #00a0a0
+}
+.vbbcss_coms2 {
+	COLOR: #a0a0a0
+}
+.vbbcss_coms3 {
+	COLOR: #66ddbb
+}
+.vbbcss_str1 {
+	COLOR: #ff00ff
+}
+.vbbcss_str2 {
+	COLOR: #80b0ff
+}
+.vbbcss_symss {
+	COLOR: #a08000
+}
+.vbbcss_syms1 {
+	COLOR: #0000ff
+}
+.vbbcss_syms2 {
+	COLOR: #0020a0
+}
+.vbbcss_keys1 {
+	COLOR: #ff0000
+}
+.vbbcss_keys2 {
+	COLOR: #007fff
+}
+.vbbcss_keys3 {
+	FONT-WEIGHT: bold; COLOR: #800000
+}
+.vbbcss_keys4 {
+	COLOR: #a04000
+}
+.vbbcss_keys5 {
+	COLOR: #0080ff
+}
+.vbbcss_img1 {
+	COLOR: #808000; HEIGHT: 16px
+}
+.vbbcss_cursor {
+	CURSOR: hand
+}
+.vbbcss_quotetitle {
+	BORDER-RIGHT: #a40 1px dashed; BORDER-TOP: #a40 1px dashed; BACKGROUND: #d0d0d0; FONT: bold 12px/18px Verdana; BORDER-LEFT: #a40 1px dashed; COLOR: #a40; BORDER-BOTTOM: #a40 1px dashed
+}
+.vbbcss_quotewinbg {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 4px; BACKGROUND: #fff; PADDING-BOTTOM: 4px; BORDER-LEFT: #ccc 1px solid; COLOR: #999; PADDING-TOP: 4px; BORDER-BOTTOM: #ccc 1px solid
+}
+.vbbcss_codetitle {
+	BORDER-RIGHT: #a40 1px dashed; BORDER-TOP: #a40 1px dashed; BACKGROUND: #d0d0d0; FONT: bold 12px/18px Verdana; BORDER-LEFT: #a40 1px dashed; COLOR: #048; BORDER-BOTTOM: #a40 1px dashed
+}
+.vbbcss_codewinbg {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BACKGROUND: #ddd; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+.vbbcss_codebodyul {
+	BACKGROUND: #ffe; MARGIN: auto; OVERFLOW: auto; WORD-WRAP: break-word
+}
+.vbbcss_codebodyul LI {
+	LINE-HEIGHT: 18px
+}
+.vbbcss_codetitle2 {
+	MARGIN: auto; FONT: bold 11px/14px Verdana; WIDTH: 96%; TEXT-ALIGN: left
+}
+.vbbcss_codewinbg2 {
+	BORDER-RIGHT: 1px dashed; PADDING-RIGHT: 4px; BORDER-TOP: 1px dashed; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; MARGIN: auto; FONT: 12px/16px Verdana; BORDER-LEFT: 1px dashed; WIDTH: 96%; PADDING-TOP: 4px; BORDER-BOTTOM: 1px dashed; TEXT-ALIGN: left
+}
+.vbbcss_codewinbg3 {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; MARGIN: auto; FONT: 12px/16px Verdana; PADDING-TOP: 4px; TEXT-ALIGN: left
+}
+.vbbcss_quotewinbg3 {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 4px; MARGIN: auto; LINE-HEIGHT: 16px; PADDING-TOP: 4px; FONT-STYLE: normal; TEXT-ALIGN: left; FONT-VARIANT: normal
+}
+.sina_quote {
+	BORDER-RIGHT: #a40 1px dashed; BORDER-TOP: #a40 1px dashed; FONT-SIZE: 12px; BACKGROUND: #fee; BORDER-LEFT: #a40 1px dashed; WIDTH: 90%; LINE-HEIGHT: 18px; BORDER-BOTTOM: #a40 1px dashed; TEXT-ALIGN: left
+}
+.sina_quote A:link {
+	COLOR: #804000
+}
+.sina_quote A:hover {
+	COLOR: #804000
+}
+.sina_quote A:visited {
+	COLOR: #804000
+}

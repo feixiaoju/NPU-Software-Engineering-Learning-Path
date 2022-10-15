@@ -1,0 +1,18 @@
+#showUserTagsDiv_tag A {
+	COLOR: #333
+}
+.blogCircleHint {
+	FONT-SIZE: 14px; MARGIN-LEFT: 45px; WIDTH: 100px; MARGIN-RIGHT: 45px
+}
+.blogCircleDash {
+	BORDER-TOP: 1px dashed; MARGIN-TOP: -10px; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 155px; WIDTH: 72%; MARGIN-RIGHT: 45px
+}
+.relateCircleBody {
+	FONT-SIZE: 12px; MARGIN: 5px 45px 0px 50px; WIDTH: 85%
+}
+.relateCircleBodyLeft {
+	OVERFLOW: hidden; WIDTH: 18%; WHITE-SPACE: nowrap; TEXT-OVERFLOW: ellipsis
+}
+.relateCircleBodyRight {
+	OVERFLOW: hidden; WIDTH: 40%; WHITE-SPACE: nowrap; TEXT-OVERFLOW: ellipsis
+}

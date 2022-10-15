@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://www.it518.net.cn/ciscosw/unlimited1.htm -->
+<HTML><HEAD><TITLE>网络学习经验总结和实验总汇！！！！！！</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><LINK 
+href="1900vlan中继.files/css1.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2900.3086" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE cellSpacing=0 cellPadding=0 width=760 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=100>&nbsp;</TD>
+    <TD align=middle height=70>1900无限制trunk中继<A name=aaa></A></TD>
+    <TD width=100>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD height=50>实验总结:trunk链路默认能够承载多个不同VLAN之间的通讯.</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><IMG height=240 src="1900vlan中继.files/wuxianzhi1.gif" width=500></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD height=70>1.将两台交换机相联的链路启用为中继链路.</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>sw1(config)#int f0/26<BR>sw1(config-if)#trunk-on 
+      <P><BR>sw2(config)#int f0/26<BR>sw2(config-if)#trunk-on</P></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD height=70>2.创建VLAN,将相应端口加入相应VLAN,因为E0/1端口输入默认VLAN1,所以只需创建VLAN 2&nbsp; 
+      将E0/6加入VLAN2既可.</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>sw1(config)#vlan 2 name ccna<BR>sw1(config)#int 
+      e0/6<BR>sw1(config-if)#vlan-membership static 2 
+      <P>sw2(config)#vlan 2 name ccna<BR>sw2(config)#int 
+      e0/6<BR>sw2(config-if)#vlan-membership static 2</P></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD height=70>3.检查两交换机之间的中继链路能否承载多个VLAN.</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>检查网络两边的VLAN 1通信.<BR>C:\&gt;ping 192.168.1.130 
+      <P>Pinging 192.168.1.130 with 32 bytes of data:</P>
+      <P>Reply from 192.168.1.130: bytes=32 time&lt;10ms TTL=128<BR>Reply from 
+      192.168.1.130: bytes=32 time&lt;10ms TTL=128<BR>Reply from 192.168.1.130: 
+      bytes=32 time&lt;10ms TTL=128<BR>Reply from 192.168.1.130: bytes=32 
+      time&lt;10ms TTL=128</P>
+      <P>Ping statistics for 192.168.1.130:<BR>Packets: Sent = 4, Received = 4, 
+      Lost = 0 (0% loss),<BR>Approximate round trip times in 
+      milli-seconds:<BR>Minimum = 0ms, Maximum = 0ms, Average = 
+      0ms<BR><BR>检查网络两边的VLAN 2能否通信.<BR>C:\&gt;ping 192.168.1.129</P>
+      <P>Pinging 192.168.1.130 with 32 bytes of data:</P>
+      <P>Reply from 192.168.1.130: bytes=32 time&lt;10ms TTL=128<BR>Reply from 
+      192.168.1.130: bytes=32 time&lt;10ms TTL=128<BR>Reply from 192.168.1.130: 
+      bytes=32 time&lt;10ms TTL=128<BR>Reply from 192.168.1.130: bytes=32 
+      time&lt;10ms TTL=128</P>
+      <P>Ping statistics for 192.168.1.130:<BR>Packets: Sent = 4, Received = 4, 
+      Lost = 0 (0% loss),<BR>Approximate round trip times in 
+      milli-seconds:<BR>Minimum = 0ms, Maximum = 0ms, Average = 
+      0ms<BR>可以看到它们可以进行通信,可知在中继链路上可以承载多个VLAN.</P></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp; 
+    <TD height=70>4.trunk链路开启条件是两边的端口必须能支持为100M以上</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD height=20>&nbsp;</TD>
+    <TD align=right><A 
+      href="http://www.it518.net.cn/ciscosw/unlimited1.htm#aaa">返回顶端</A></TD></TR></TBODY></TABLE></BODY></HTML>

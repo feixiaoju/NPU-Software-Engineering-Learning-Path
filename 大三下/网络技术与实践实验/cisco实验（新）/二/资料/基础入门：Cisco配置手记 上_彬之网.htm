@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://hi.baidu.com/bin1228/blog/item/eede9b11d5bd5b7eca80c4bf.html -->
+<!--STATUS OK--><HTML><HEAD><TITLE>基础入门：Cisco配置手记 上_彬之网</TITLE>
+<META http-equiv=content-type content="text/html; charset=gb2312">
+<STYLE>.error {
+	FONT-SIZE: 12px; COLOR: #ff0000
+}
+</STYLE>
+
+<SCRIPT language=javascript src="基础入门：Cisco配置手记 上_彬之网.files/popup.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="基础入门：Cisco配置手记 上_彬之网.files/g_spjs.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+<!--
+
+var allkey="";
+var i=0;
+var flag=0;
+function setpv(allnum)
+{
+	var num = allnum.split('_');
+	document.getElementById("result").innerHTML=num[0];
+}
+		 
+function checkMail(s) 
+{ 
+  	var pattern=/\w+@\w+\.[a-z]+/; 
+  	if(pattern.test(s)) 
+    { 
+       return true; 
+    } 
+  	else 
+   { 
+      return false; 
+   } 
+} 
+
+
+function checkeandu(eanduid)
+{
+	var eanduvalue=G(eanduid).value;
+	var len=bytes(eanduvalue);
+	if(len>128)
+	{
+		showErr(2,"您输入的网址或邮箱太长，请保持在128字节以内。");
+		return false;
+	}
+	else
+	{ 
+		 return true;
+	}
+		
+}
+
+function cmtdel(str)
+{
+	var pop=new Popup({ contentType:3,isReloadOnClose:false,width:340,height:80});
+	pop.setContent("title","删除评论");
+	pop.setContent("confirmCon","您确定要彻底删除这条评论吗？");
+	pop.setContent("callBack",delCallback2);
+	pop.setContent("parameter",{fid:str,popup:pop});
+	pop.build();
+	pop.show();
+	return false;
+}
+function delCallback2(para)
+{
+	var o_pop=para["popup"];
+	o_pop.config.contentType=1;
+	o_pop.setContent("contentUrl","");
+	o_pop.reBuild();
+	G(para["fid"]).target=o_pop.iframeIdName;
+	eval("document."+para["fid"]).submit();
+}
+
+
+
+function checkname(strid)
+{
+	var ele=document.getElementById(strid);
+	var len=bytes(ele.value);
+	if(len>49)
+	{
+		showErr(1,"您输入的姓名太长，请保持在49字节以内。");
+		return false;
+	}
+	else 
+	{		
+		if(len==0)
+		{
+			document.getElementById(strid).value="匿名网友";
+		}
+		 return true;
+	}	
+	
+}
+
+function checktext(textid)
+{
+		document.getElementById(textid).value=trimlr(textid);
+		var str=trimrn(textid);
+		len=str.length;
+		if(len==0 || ((/^[\s,　]+$/gi).test(str)) )
+		{
+			showErr(3,"您必须输入评论内容，请检查。");
+			return false;
+		}
+		else 
+		{
+				if(len>1000)
+				{
+					showErr(3,"您输入的评论内容太长，请保持在500字以内。");
+					return false;
+				}
+			return true;
+		}	
+}
+
+function showErr(index,str)
+{
+	G(index+"_err").style.display="";
+	G(index+"_err_con").innerHTML=str;
+}
+function hidErr(index)
+{
+	G(index+"_err").style.display="none";
+	G(index+"_err_con").innerHTML="";
+}
+
+function alertPop(tit,con)
+{
+	var pop=new Popup({ contentType:4,isReloadOnClose:false,width:340,height:80});
+	pop.setContent("title",tit);
+	pop.setContent("alertCon",con);
+	pop.build();
+	pop.show();
+}
+
+function cmtfull()
+{
+	var cnum=0;
+	if(cnum>=50000)
+	{
+		alertPop("发表评论","单篇日志评论数最多为50000条.");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function checkcmtform()
+{
+	if(checkname("spBlogCmtor")&&checkeandu("spBlogCmtURL")&&checktext("spBlogCmtText")&&cmtfull())
+	{
+		submitForm();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+var g_pop=null;
+function submitForm()
+{
+	g_pop=new Popup({ contentType:1,isReloadOnClose:false,width:340,height:80});
+	g_pop.setContent("title","添加评论");
+	g_pop.setContent("contentUrl","");
+	g_pop.build();
+	G("popFormSubmit").target=g_pop.iframeIdName;
+	g_pop.show();
+}
+
+function g_close_pop()
+{
+	g_pop.close();
+}
+
+function formatonlinpic()
+{
+	formatverkey();
+var picobj=document.getElementsByName("onlinepic");
+var picnum=picobj.length;
+	
+	for(var i=0;i<picnum;i++)
+	{
+		if(picobj[i].width>200)
+		{
+			picobj[i].width=200;
+		}
+		if(picobj[i].height>200)
+		{
+			picobj[i].height=200;
+		}
+	}
+
+}
+
+function formatverkey()
+{
+	if(document.getElementById("vercode"))
+	{
+
+			if(document.getElementById("spBlogCmtText").value=="")
+	{
+		document.getElementById("vercode").style.display="none";
+	}
+	}
+
+}
+function showverkey()
+{	
+	if(document.getElementById("vercode"))
+	{
+	document.getElementById("vercode").style.display="";
+	}
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2900.3086" name=GENERATOR></HEAD>
+<BODY onload=formatonlinpic();>
+<CENTER>
+<SCRIPT language=JavaScript>
+<!--
+if (top.location != self.location) 
+{
+	top.location=self.location;
+}
+//-->
+</SCRIPT>
+<LINK href="基础入门：Cisco配置手记 上_彬之网.files/7b2a3495c22a27087bf4801a.css" 
+type=text/css rel=stylesheet><LINK href="基础入门：Cisco配置手记 上_彬之网.files/space.css" 
+type=text/css rel=stylesheet>
+<STYLE type=text/css>#usrbar {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 0px; FONT-SIZE: 12px; BACKGROUND: #ffffff; FILTER: alpha(opacity=65); PADDING-BOTTOM: 3px; WIDTH: 100%; COLOR: #000000; LINE-HEIGHT: 19px; PADDING-TOP: 4px; FONT-FAMILY: Arial; LETTER-SPACING: normal; HEIGHT: 19px; TEXT-ALIGN: right; moz-opacity: 0.5
+}
+#usrbar A {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+#usrbar A:link {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+#usrbar A:visited {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+#ft {
+	CLEAR: both; FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 20px; FONT-FAMILY: Arial; HEIGHT: 20px; TEXT-ALIGN: center
+}
+#ft A {
+	COLOR: #7777cc; TEXT-DECORATION: underline
+}
+#ft A:link {
+	COLOR: #7777cc; TEXT-DECORATION: underline
+}
+#ft A:visited {
+	COLOR: #7777cc; TEXT-DECORATION: underline
+}
+#usrbar {
+	LETTER-SPACING: normal
+}
+#usrbar A {
+	LETTER-SPACING: normal
+}
+#usrbar A:link {
+	LETTER-SPACING: normal
+}
+#usrbar A:visited {
+	LETTER-SPACING: normal
+}
+#ft {
+	LETTER-SPACING: normal
+}
+#ft A {
+	LETTER-SPACING: normal
+}
+#ft A:link {
+	LETTER-SPACING: normal
+}
+#ft A:visited {
+	LETTER-SPACING: normal
+}
+</STYLE>
+
+<DIV id=usrbar><NOBR>
+<SCRIPT> var myref = encodeURI("http://hi.baidu.com/bin1228/blog/item/eede9b11d5bd5b7eca80c4bf%2Ehtml");</SCRIPT>
+<A href="http://www.baidu.com/" target=_blank>百度首页</A> | <A 
+href="http://hi.baidu.com/" target=_blank>百度空间</A>
+<SCRIPT language=JavaScript>
+        document.write(" | <a href='http://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u="+myref+"'>登录</a>");
+        </SCRIPT>
+ </NOBR></DIV>
+<DIV id=main align=left><!--[if IE]>
+<SCRIPT>
+var objmain = document.getElementById("main");
+function updatesize(){ var bodyw = window.document.body.offsetWidth; if(bodyw <= 790) objmain.style.width="772px"; else if(bodyw >= 1016) objmain.style.width="996px"; else objmain.style.width="100%"; }
+updatesize(); window.onresize = updatesize;
+</SCRIPT>
+<![endif]-->
+<DIV id=header>
+<DIV class=lc>
+<DIV class=rc></DIV></DIV>
+<DIV class=tit><A class=titlink title="bin1228的空间 http://hi.baidu.com/bin1228" 
+href="http://hi.baidu.com/bin1228">彬之网</A></DIV>
+<DIV class=desc>彬之网</DIV>
+<DIV id=tabline></DIV>
+<DIV id=tab><A href="http://hi.baidu.com/bin1228">主页</A><A class=on 
+href="http://hi.baidu.com/bin1228/blog">博客</A><A 
+href="http://hi.baidu.com/bin1228/album">相册</A><SPAN>|</SPAN><A 
+href="http://hi.baidu.com/bin1228/profile">个人档案</A> <SPAN>|</SPAN><A 
+href="http://hi.baidu.com/bin1228/friends">好友</A> </DIV></DIV>
+<DIV class=stage>
+<DIV class=stagepad>
+<DIV style="WIDTH: 100%">
+<TABLE class=modth cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD class=modtl width=7>&nbsp;</TD>
+    <TD class=modtc noWrap>
+      <DIV class=modhead><SPAN class=modtit>查看文章</SPAN></DIV></TD>
+    <TD class=modtc noWrap align=right></TD>
+    <TD class=modtr width=7>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV class=modbox id=m_blog>
+<DIV class=tit>基础入门：Cisco配置手记 上</DIV>
+<DIV class=date>2007-03-02 09:45</DIV>
+<TABLE style="TABLE-LAYOUT: fixed">
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV class=cnt>
+      <P>现有设备：CISCO路由器2620XM（4台）和2621XM（5台），3750三层交换机，PIX-515E防火墙，CISCO2950二层交换机（9台）<BR>重点命令：有安全，控制，监控，监测和检测功能的命令集合和命令组合</P>
+      <P><STRONG>一、两层交换机<BR></STRONG><BR><STRONG>1、基本配置<BR>（1）设置VLAN1的IP地址，掩码：</STRONG><BR>配置：<BR>sw 
+      &nbsp;itch#config&nbsp;terminal<BR>(config)#interface&nbsp;vlan1&nbsp;&nbsp;&nbsp;&nbsp;！进入到要配置IP的接口<BR>(config-if)#ip&nbsp;address&nbsp;10.1.10.253(ip)&nbsp;&nbsp;255.255.255.0(mask)&nbsp;&nbsp;！设置参数<BR>验证：<BR>(config-if)#exit<BR>switch#show&nbsp;interface&nbsp;vlan1<BR>保存设置：<BR>switch#copy&nbsp;running-config&nbsp;startup-config<BR><BR><STRONG>（2）划分VLAN</STRONG><BR>配置：<BR>switch#vlan&nbsp;database(还有一种方法)&nbsp;&nbsp;&nbsp;！创建一个VLAN<BR>switch#vlan&nbsp;2<BR>switch#exit<BR>switch#config&nbsp;terminal<BR>one&nbsp;port:<BR>(config)#interface&nbsp;fastethernet0/0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;！进入到要被划分的端口<BR>(config-if)#switchport&nbsp;access&nbsp;vlan&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;！划分到一个VLAN<BR>multiports:<BR>(config)#interface&nbsp;range&nbsp;fastethernet0/0&nbsp;-7&nbsp;&nbsp;！进入到要被集体划分的端口<BR>(config-if)#switchport&nbsp;access&nbsp;vlan&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;！划分到一个VLAN<BR>验证：<BR>switch#show&nbsp;vlan<BR>保存：<BR>switch#copy&nbsp;running-config&nbsp;startup-config<BR><BR><STRONG>（3）设置trunk</STRONG><BR>配置：<BR>switch#config&nbsp;terminal<BR>(config)#interface&nbsp;gigabitethernet0/1&nbsp;&nbsp;！进入要配置成干道的接口<BR>(config-if)#switchport&nbsp;mode&nbsp;trunk&nbsp;&nbsp;&nbsp;&nbsp;！设置成干道<BR>验证：<BR>switch#show&nbsp;interface&nbsp;trunk<BR>保存：<BR>switch#copy&nbsp;running-config&nbsp;startup-config<BR><BR><STRONG>（4）连接路由器</STRONG><BR>如果交换机上有多个VLAN，则所连的路由器接口就必须有多个IP地址。要用子接口设置多IP地址。连接到路由器上的接口要被设置成trunk，并且要封装干道协议：ISL，或者802.1Q。<BR>配置交换机：<BR>switch#config&nbsp;terminal<BR>(config)#interface&nbsp;gigabitethernet0/1<BR>(config-if)#switchport&nbsp;mode&nbsp;trunk&nbsp;&nbsp;!配置成干道，将自动封装802.1q协议<BR>配置路由器：<BR>router#config&nbsp;terminal<BR>(config)#interface&nbsp;fastethernet0/0.2&nbsp;&nbsp;&nbsp;！进入子接口2<BR>(config-subif)#encapsulation&nbsp;dot1q&nbsp;2&nbsp;&nbsp;&nbsp;！子接口对应VLAN2，并封装dot1q协议<BR>(config-subif)#ip&nbsp;address&nbsp;10.1.20.1&nbsp;&nbsp;255.255.255.0&nbsp;&nbsp;!配置了10.1.20.0/24网段的网关<BR>确认：<BR>router#show&nbsp;interface&nbsp;fastethernet0/0<BR>不同VLAN下的主机可以相互ping通，则配置成功。<BR>保存配置<BR><BR><STRONG>（5）连接交换机</STRONG><BR>同种类型的网络设备相连要使用交叉线。交换机使用交叉线相连后，将会自动将两端设置成干道。<BR><BR><STRONG>2、VTP（VLAN&nbsp;Trunk&nbsp;Protocol）</STRONG><BR>（1）&nbsp;作用：<BR>允许用户集中管理网络中交换机的配。VTP是一种消息协议，可以对整个网络内的VLAN的添加、删除和重命名操作进行管理，以此维护VLAN配置的一致性。<BR>（2）&nbsp;工作方式<BR>确定一条交换机为VTP服务器。<BR>可以在服务器上更改VLAN的配置，并把该配置传播到网络中的所有VTP客户机。<BR>当交换机配置成VTP客户机之后，就不能物理地改变该交换机的VLAN配置。<BR>唯一可以更改VLAN配置的方法是当且仅当VTP客户端交换机接收到来自其VTP服务器的VTP更新信息时，才能更改。<BR>多台VTP服务器管理不同的VTP客户机，必须指定一个VTP域。服务器和客户机在各自的域内。</P>
+      <P><STRONG>二、路由器<BR>1、基本配置</STRONG><BR>（1）以太网口配置<BR>注：路由器以太网口直接接主机用交叉线。<BR>（2）串口配置<BR>（3）配置静态路由<BR>（4）配置动态路由协议<BR>（5）配置访问控制列表（ACL）**<BR>（6）路由器互联&nbsp;</P>
+      <P><STRONG>2、问题</STRONG><BR>（1）无法配置静态路由，出现“Default&nbsp;gateway&nbsp;is&nbsp;not&nbsp;set&nbsp;…..&nbsp;ICMP&nbsp;redirect&nbsp;cache&nbsp;is&nbsp;empty”<BR>原因：IP路由被禁用<BR>解决：(config)#ip&nbsp;routing<BR><BR>（2）与其他设备的接口状态上，”protocol&nbsp;&nbsp;down”<BR>可能的原因：双绞线的接线类型不对<BR>解决：换成直通线或者交叉线。<BR><BR><STRONG>三、三层交换机</STRONG><BR><STRONG>1、基本配置<BR></STRONG><BR>（1）配置IP<BR>手工配置：<BR>(config)#interface&nbsp;vlan&nbsp;vlan-id<BR>(config-if)#ip&nbsp;address&nbsp;ip-address&nbsp;subnet-mask<BR>(config-if)#exit<BR>(config)#ip&nbsp;default-gateway&nbsp;ip-address<BR>确认配置：<BR>#show&nbsp;interface&nbsp;vlan&nbsp;vlan-id<BR>#show&nbsp;ip&nbsp;redirects&nbsp;&nbsp;！确认默认网关配置<BR>保存：＃copy&nbsp;running-config&nbsp;startup-config<BR>使用DHCP配置<BR><BR>（2）使不同VLAN互联<BR>&nbsp;</P>
+      <P>（3）配置某个端口为trunk<BR>(config)#interface&nbsp;fastethernet1/0/23<BR>(config-if)#switchport&nbsp;encapsultion&nbsp;dot1q<BR>(config-if)#switchport&nbsp;mode&nbsp;trunk<BR><BR>（4）默认路由及路由协议的设定<BR>问题<BR>（1）多个子网连接到三层交换机，交换机上设定了每个子网对应的网关地址，交换机通过router连接到其他的网络或者区域。三层switch和router上相同网段的地址无法相互ping&nbsp;通。如：3750上有192.168.8.254（VLAN1），192.168.16.254（VLAN2），192.168.24.254（VLAN3）；router上有192.168.8.1，192.168.16.1，192.168.24.1。<BR>&nbsp;&nbsp;&nbsp;&nbsp;现象：192.168.8.254&nbsp;可以ping通192.168.8.1，但是.16.和.24.网段的无法ping通。<BR>&nbsp;&nbsp;&nbsp;&nbsp;原因：router接到switch上的接口没有设置成trunk。<BR><BR><STRONG>四、防火墙<BR></STRONG>CISCO&nbsp;PIX系列属于状态检测防火墙。<BR>Note:ASA(Adaptive&nbsp;Security&nbsp;Algorithm)&nbsp;allows&nbsp;one&nbsp;way&nbsp;(inside&nbsp;to&nbsp;outside)&nbsp;connections&nbsp;without&nbsp;an&nbsp;explicit&nbsp;configuration&nbsp;in&nbsp;memory.<BR><BR><STRONG>1、特点</STRONG><BR><STRONG>（1）自适应安全算法（ASA）</STRONG><BR>创建状态会话流表（state&nbsp;table）。各种连接信息都被记录进表中。<BR>ASA是一个有状态、面向连接的过程，它在状态表中维持会话信息，应用对状态表的安全策略来控制通过防火墙的所有流量。<BR>连接状态包括：源/目的IP，源/目的端口，TCP顺序信息，附加的TCP/UDP标记。应用一个随机产生的TCP顺序号。总称为“会话对象”。<BR><BR>内部不主动发出数据，要求响应，外部的数据就无法进入内部了吗。<BR>PIX中ASA和状态过滤的工作机制：<BR>a、&nbsp;内部主机开始一个对外部资源的连接<BR>b、&nbsp;PIX在状态表中写入一个会话（连接）对象<BR>c、&nbsp;会话对象同安全策略相比较。如果连接不被允许，此会话对象被删除，并且连接被取消<BR>h、&nbsp;如果安全策略认可这个连接，此连接继续向外部资源发送<BR>j、&nbsp;外部资源响应这个请求<BR>k、&nbsp;响应信息到达防火墙，与会话对象比较。匹配则响应信息被发送到内部主机，不匹配则连接就会被取消。&nbsp;</P>
+      <P><STRONG>&nbsp;（2）贯穿式代理</STRONG><BR>认证和授权一个防火墙上输入/输出的连接。<BR>它在应用层完成用户认证，依照安全策略检验授权。当安全策略授权时打开这个连接。这个连接后面的流量不再在应用层处理，而是进行状态检测。<BR><BR><STRONG>（3）冗余<BR></STRONG><BR><STRONG>2、基本配置<BR></STRONG><BR>配置完基本参数后，发现从PIX上可以ping通内网和外网的地址。但是内外网的主机无法相互ping通。内网主机无法ping通PIX外口。但是，内网主机可以访问外网的服务器。（可能原因：PIX默认关闭ICMP响应？？）</P>
+      <P>基本配置命令：interface&nbsp;,&nbsp;nameif&nbsp;,&nbsp;ip&nbsp;address&nbsp;,&nbsp;nat&nbsp;,&nbsp;global&nbsp;,&nbsp;route</P>
+      <P><BR><STRONG>（1）激活以太端口</STRONG><BR>firewell#config&nbsp;terminal<BR>(config)#interface&nbsp;ethernet0&nbsp;auto<BR>(config)#interface&nbsp;ethernet1&nbsp;auto&nbsp;&nbsp;&nbsp;&nbsp;!外口必须用命令激活<BR><BR><STRONG>（2）命名端口和安全级别</STRONG><BR>(config)#nameif&nbsp;&nbsp;ethernet1&nbsp;&nbsp;inside&nbsp;&nbsp;security0<BR>(config)#nameif&nbsp;&nbsp;ethernet0&nbsp;&nbsp;outside&nbsp;&nbsp;security100<BR><BR><STRONG>（3）配置内外口</STRONG><BR>firewell#config&nbsp;terminal<BR>(config)#ip&nbsp;address&nbsp;inside&nbsp;192.168.1.1&nbsp;255.255.255.0&nbsp;<BR>(config)#ip&nbsp;address&nbsp;outside&nbsp;222.20.16.1&nbsp;255.255.255.0</P>
+      <P><STRONG>（4）配置NAT和PAT</STRONG><BR>(config)#nat&nbsp;(inside)&nbsp;1&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;!所有的内口地址都<BR>(config)#nat&nbsp;(inside)&nbsp;2&nbsp;192.168.8.0&nbsp;255.255.255.0&nbsp;&nbsp;&nbsp;&nbsp;<BR>(config)#global&nbsp;(outside)&nbsp;2&nbsp;10.1.30.150-10.1.30.160&nbsp;netmask&nbsp;255.255.0.0<BR>测试配置：<BR>&nbsp;&nbsp;ping<BR>&nbsp;&nbsp;debug<BR><BR><STRONG>（5）DMZ的访问</STRONG></P>
+      <P><STRONG>（6）转换表的操作</STRONG><BR>show&nbsp;&nbsp;xlate&nbsp;&nbsp;&nbsp;&nbsp;显示转换表的信息<BR>clear&nbsp;&nbsp;xlate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每次重建转换表要运行，以清除原有的转换槽，否则原信息将在超时（3小时）后才被丢弃<BR>show&nbsp;conn&nbsp;&nbsp;&nbsp;&nbsp;查找连接故障，为选择的特定选项显示所有活动的TCP连接的数量和状态<BR>可以更改转换表的操作：<BR>nat&nbsp;，global&nbsp;，static&nbsp;，route，alias，conduit<BR><BR><STRONG>（7）配置网络时间协议（NTP）</STRONG><BR>&nbsp;NTP&nbsp;server与PIX的关系</P>
+      <P><STRONG>（8）访问配置<BR></STRONG>经由PIX的入站访问<BR><BR><STRONG>step1：静态网络地址转换</STRONG><BR>&nbsp;&nbsp;静态网络地址转换，不节省已经分配的IP地址&nbsp;&nbsp;<BR>static&nbsp;[(&nbsp;prenat_interface,postnat_interface)]&nbsp;{mapped_address&nbsp;|&nbsp;interface}&nbsp;real_address&nbsp;[dns]&nbsp;[netmask&nbsp;mask]&nbsp;[norandomseq]&nbsp;[&nbsp;max_cons&nbsp;[em_limit]]<BR>&nbsp;&nbsp;&nbsp;设定一个内部地址到一个外部地址的映射<BR>&nbsp;&nbsp;&nbsp;(config)#static&nbsp;(inside,outside)&nbsp;211.70.96.10&nbsp;10.1.100.10&nbsp;netmask&nbsp;255.255.255.255<BR>&nbsp;&nbsp;&nbsp;或者一个内部网络到一个外部网络的映射<BR>&nbsp;&nbsp;&nbsp;(config)#static&nbsp;(inside,outside)&nbsp;211.70.96.0&nbsp;10.1.100.0&nbsp;netmask&nbsp;255.255.255.0<BR>&nbsp;&nbsp;&nbsp;静态端口地址转换，不支持H.323或者多媒体应用流量<BR>&nbsp;&nbsp;&nbsp;static&nbsp;[(internal_if_name,external_if_name)]&nbsp;{tcp|udp}&nbsp;{global_ip&nbsp;|&nbsp;interface}&nbsp;global&nbsp;local_ip&nbsp;local_port&nbsp;[netmask&nbsp;mask]&nbsp;[&nbsp;max_cons&nbsp;[emb_limit&nbsp;[norandomseq]]]<BR></P></DIV></TD></TR></TBODY></TABLE><BR>
+<DIV class=opt><A title=查看该分类中所有文章 
+href="http://hi.baidu.com/bin1228/blog/category/&Acirc;·&Oacute;&Eacute;&AElig;÷">类别：路由器</A> | <A 
+title=将此文章添加到百度搜藏 
+onclick="window.open('http://cang.baidu.com/do/add?it='+encodeURIComponent('基础入门：Cisco配置手记 上'+'_百度空间')+'&amp;iu='+encodeURIComponent(location.href)+'&amp;fr=sp#nw=1','_s','scrollbars=no,width=600,height=450,right=75,top=20,status=no,resizable=yes'); return false;" 
+href="http://cang.baidu.com/do/add" target=_blank>添加到搜藏</A> | 浏览(<SPAN 
+id=result></SPAN>) </DIV>
+<DIV class=line></DIV>
+<SCRIPT language=JavaScript>
+allkey=allkey+"c58e25f42481e2ef7609d73c_eede9b11d5bd5b7eca80c4bf_";
+</SCRIPT>
+
+<DIV id=in_comment><A name=comment></A>
+<DIV class=tit>网友评论：</DIV>
+<SCRIPT>
+function writecmt(type,id,cmtname,cmturl,cmttime){
+	var html1="";
+	if(type==1){
+		if(cmturl==""){
+			html1="<a name='"+id+"'>"+cmtname+"</a> - <span class='date'>"+cmttime+"</span> ";
+		}else{
+			html1="<a name='"+id+"' href='"+cmturl+"' target='_blank' title='"+cmturl+"'>"+cmtname+"</a> - <span class='date'>"+cmttime+"</span> ";
+		}
+	}else{
+		if(cmtname=="匿名网友"){
+			if(cmturl==""){
+				html1="<a name='"+id+"'>"+cmtname+"</a> - <span class='date'>"+cmttime+"</span> ";
+			}else{
+				html1="<a name='"+id+"' href='"+cmturl+"' target='_blank' title='"+cmturl+"'>"+cmtname+"</a> - <span class='date'>"+cmttime+"</span>";
+			}
+		}else{
+			if(cmturl==""){
+				html1="<div class='f14' style='display:inline'>网友:<a name='"+id+"'>"+cmtname+"</a> - <span class=\"date\">"+cmttime+"</span></div>";
+			}else{
+				html1="<div class='f14' style='display:inline'>网友:<a name='"+id+"' href='"+cmturl+"' target='_blank' title='"+cmturl+"'>"+cmtname+"</a> - <span class=\"date\">"+cmttime+"</span></div>";
+			}
+		}
+	}
+	document.write(html1);
+}
+
+</SCRIPT>
+
+<DIV id=page></DIV></DIV>
+<DIV id=in_send>
+<FORM id=popFormSubmit name=form1 onsubmit="return checkcmtform()" 
+action=/bin1228/commit method=post><INPUT type=hidden value=8 name=ct> <INPUT 
+type=hidden value=1 name=cm> <INPUT type=hidden value=eede9b11d5bd5b7eca80c4bf 
+name=spBlogID>
+<SCRIPT language=JavaScript>
+	document.write("<input type='hidden' name='spRefURL' value='"+window.location.href+"'>");
+</SCRIPT>
+ 
+<DIV class=tit>发表评论：</DIV>
+<TABLE cellSpacing=5 cellPadding=0 width=620 border=0>
+  <TBODY>
+  <TR>
+    <TD class=f14>姓　名：</TD>
+    <TD><INPUT id=spBlogCmtor style="WIDTH: 220px" onfocus=hidErr(1); 
+      maxLength=49 onchange="checkname('spBlogCmtor')" name=spBlogCmtor>
+      <DIV id=nmerror style="DISPLAY: none">*姓名最长为50字节</DIV></TD></TR>
+  <TR id=1_err style="DISPLAY: none">
+    <TD>&nbsp;</TD>
+    <TD>
+      <DIV class=error id=1_err_con></DIV></TD></TR>
+  <TR>
+    <TD class=f14>网址或邮箱：</TD>
+    <TD><INPUT id=spBlogCmtURL style="WIDTH: 360px" onfocus=hidErr(2); 
+      maxLength=128 onchange="checkeandu('spBlogCmtURL')" name=spBlogCmtURL> 
+    (选填)</TD>
+    <SCRIPT>
+G("spBlogCmtor").value="";
+G("spBlogCmtURL").value="";
+</SCRIPT>
+  </TR>
+  <TR id=2_err style="DISPLAY: none">
+    <TD>&nbsp;</TD>
+    <TD>
+      <DIV class=error id=2_err_con></DIV></TD></TR>
+  <TR>
+    <TD class=f14 vAlign=top>内　容：</TD>
+    <TD><TEXTAREA id=spBlogCmtText style="WIDTH: 520px; HEIGHT: 155px" onfocus=showverkey();hidErr(3); name=spBlogCmtText></TEXTAREA>
+      <SCRIPT>
+G("spBlogCmtor").value=G("spBlogCmtor").defaultValue;
+G("spBlogCmtText").value="";
+</SCRIPT>
+       </TD></TR>
+  <TR id=3_err style="DISPLAY: none">
+    <TD>&nbsp;</TD>
+    <TD>
+      <DIV class=error id=3_err_con></DIV></TD></TR>
+  <TR id=vercode>
+    <TD class=f14 vAlign=top>验证码：</TD>
+    <TD vAlign=top><INPUT type=hidden 
+      value=97954497CDF9473B8A3F746EDE20FD22796E9CB91F9685A978998CE856F33FD4738810570E01D462440C282EA74937FCDF259A908D18C804599785A8D4A2A7A6 
+      name=spVcode> <INPUT maxLength=4 size=6 name=spVerifyKey 
+      autocomplete="off">请输入下图中的四位验证码，字母不区分大小写。<BR>
+      <SCRIPT language=JavaScript>
+
+			var imgsrc="http://post.baidu.com/cgi-bin/genimg?97954497CDF9473B8A3F746EDE20FD22796E9CB91F9685A978998CE856F33FD4738810570E01D462440C282EA74937FCDF259A908D18C804599785A8D4A2A7A6";
+			document.write("<img id='verifypic' src='"+imgsrc+"' width='120' height='40'>");
+
+			function newverifypic(){
+				document.getElementById("verifypic").src = imgsrc +"&t="+ Math.random();
+			}
+		</SCRIPT>
+      <A title=看不清左边的字符 href="javascript:newverifypic();">看不清?</A> </TD></TR>
+  <TR>
+    <TD class=f14 vAlign=top>&nbsp;</TD>
+    <TD class=f14 
+  vAlign=top><INPUT type=submit value=发表评论 name=btn_ok></TD></TR></TBODY></TABLE></FORM></DIV><BR></DIV>
+<TABLE height=8 cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD class=modbl width=7>&nbsp;</TD>
+    <TD class=modbc>&nbsp;</TD>
+    <TD class=modbr width=7>&nbsp;</TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV>
+<SCRIPT language=javascript>
+<!--
+var hstr="/bin1228/brwstat?key1=1";
+document.write("<script src='"+hstr+"&key2="+allkey+"'><\/script>");
+//-->
+</SCRIPT>
+<BR>
+<CENTER>
+<DIV id=ft>&copy;2007 Baidu</DIV></CENTER>
+<SCRIPT>
+if(document.getElementById("m_blog"))
+{
+	var imgarray = document.getElementById("m_blog").getElementsByTagName('img');
+	var imgw = document.getElementById("m_blog").offsetWidth;
+	imgw =imgw-40;
+	for(var i=0; i<imgarray.length; i++){
+	if(imgarray[i].className=="blogimg" && imgarray[i].width>=imgw) imgarray[i].width=imgw;
+	}
+}
+</SCRIPT>
+</CENTER><IMG style="DISPLAY: none" src=""> </BODY></HTML>

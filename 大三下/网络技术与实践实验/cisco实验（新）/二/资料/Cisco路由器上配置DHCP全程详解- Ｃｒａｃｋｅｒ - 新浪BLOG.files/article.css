@@ -1,0 +1,87 @@
+.article {
+	MARGIN-BOTTOM: 2px; WIDTH: 550px; TEXT-ALIGN: center
+}
+.article .text {
+	FONT-SIZE: 14px; LINE-HEIGHT: 24px
+}
+.article .text P {
+	MARGIN: 0px; FONT-FAMILY: 'ËÎÌו', 'Courier New'
+}
+.article .text DIV {
+	MARGIN-BOTTOM: 0px; FONT-FAMILY: 'ËÎÌו', 'Courier New'
+}
+.article .text TD {
+	LINE-HEIGHT: 1.5
+}
+.article .path {
+	TEXT-INDENT: 12px; HEIGHT: 30px
+}
+.article .dashed {
+	DISPLAY: none
+}
+.article .form {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.article TABLE {
+	FONT-SIZE: 12px; WIDTH: 100%
+}
+.article .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 521px; COLOR: #000; TEXT-INDENT: 30px; LINE-HEIGHT: 30px; FONT-FAMILY: Helvetica,monospace; WHITE-SPACE: nowrap
+}
+.article .up {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/box_2/1Up.gif) no-repeat center 50%
+}
+.article .down {
+	BACKGROUND: url(http://image2.sina.com.cn/blog/tmpl/v3/theme/3/images/box_2/1Down.gif) no-repeat center 50%
+}
+.article .author {
+	COLOR: #606060; HEIGHT: 24px; TEXT-ALIGN: right
+}
+.article .time {
+	FONT-SIZE: 11px; COLOR: #cc6633
+}
+.article .aBody TABLE {
+	PADDING-LEFT: 2px; WIDTH: 530px; COLOR: #000
+}
+.article .aSize {
+	HEIGHT: 20px
+}
+.article .aSize A {
+	COLOR: #606060
+}
+.article .itemBox {
+	TEXT-ALIGN: center
+}
+.article .itemBox TABLE {
+	WIDTH: 530px; COLOR: #000
+}
+.article .text {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 2px; PADDING-BOTTOM: 18px; OVERFLOW: hidden; WIDTH: 500px; COLOR: #663300; WORD-BREAK: break-all; LINE-HEIGHT: 1.5; PADDING-TOP: 14px
+}
+.article .text FONT {
+	
+}
+.article .text A {
+	COLOR: #666600; TEXT-DECORATION: underline
+}
+.article .text DIV A {
+	FONT-SIZE: 100%
+}
+.article .text P A {
+	FONT-SIZE: 100%
+}
+.article .function {
+	HEIGHT: 30px; TEXT-ALIGN: right
+}
+.article .function TD {
+	COLOR: #cc9900
+}
+.article .function A {
+	COLOR: #cc9900
+}
+.article .page A {
+	MARGIN: 0px 5px; COLOR: #333333
+}
+.article .page SPAN {
+	FONT-WEIGHT: bold; MARGIN: 0px 5px; COLOR: red
+}

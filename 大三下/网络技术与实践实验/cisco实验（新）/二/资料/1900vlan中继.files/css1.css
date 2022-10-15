@@ -1,0 +1,18 @@
+BODY {
+	BACKGROUND-IMAGE: url(../images/index_bg.gif); MARGIN: 0px
+}
+TD {
+	FONT-SIZE: 14px; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; POSITION: static; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; POSITION: static; TEXT-DECORATION: none
+}
+A:hover {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; LEFT: 2px; PADDING-BOTTOM: 0px; COLOR: #ff0000; PADDING-TOP: 0px; FONT-FAMILY: "宋体"; POSITION: relative; TOP: 2px; TEXT-DECORATION: underline
+}
+.border10 {
+	BORDER-RIGHT: #ccc 2px solid; BORDER-TOP: #ccc 2px solid; BORDER-LEFT: #ccc 2px solid; BORDER-BOTTOM: #ccc 2px solid
+}
